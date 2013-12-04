@@ -1,0 +1,3792 @@
+---
+:cane:
+  :total_violations: 10
+  :violations:
+    :line_style:
+    - :line: app/controllers/application_controller.rb:10
+      :description: Line is >80 characters (93)
+    - :line: app/helpers/application_helper.rb:3
+      :description: Line is >80 characters (81)
+    :comment:
+    - :line: app/controllers/application_controller.rb:1
+      :class_name: ApplicationController
+    - :line: app/controllers/omniauth_callbacks_controller.rb:1
+      :class_name: OmniauthCallbacksController
+    - :line: app/controllers/users/passwords_controller.rb:1
+      :class_name: Users::PasswordsController
+    - :line: app/controllers/users/registrations_controller.rb:1
+      :class_name: Users::RegistrationsController
+    - :line: app/helpers/application_helper.rb:1
+      :class_name: ApplicationHelper
+    - :line: app/models/post.rb:1
+      :class_name: Post
+    - :line: app/models/user.rb:1
+      :class_name: User
+    - :line: app/policies/application_policy.rb:1
+      :class_name: ApplicationPolicy
+:churn:
+  :changes: []
+  :class_churn: []
+  :method_churn: []
+  :changed_files: []
+  :changed_classes: []
+  :changed_methods: []
+:flay:
+  :total_score: '240'
+  :matches:
+  - :reason: 1) Similar code found in :iter (mass = 102)
+    :matches:
+    - :name: app/views/posts/show.html.erb
+      :line: '19'
+    - :name: app/views/projects/show.html.erb
+      :line: '7'
+  - :reason: 2) IDENTICAL code found in :block (mass*2 = 64)
+    :matches:
+    - :name: app/views/layouts/application.html.erb
+      :line: '48'
+    - :name: app/views/shared/_nav.html.erb
+      :line: '32'
+  - :reason: 3) Similar code found in :defn (mass = 38)
+    :matches:
+    - :name: app/controllers/posts_controller.rb
+      :line: '8'
+    - :name: app/controllers/posts_controller.rb
+      :line: '30'
+  - :reason: 4) Similar code found in :block (mass = 36)
+    :matches:
+    - :name: app/controllers/posts_controller.rb
+      :line: '57'
+    - :name: app/controllers/posts_controller.rb
+      :line: '74'
+:flog:
+  :total: 312.0361984343779
+  :average: 5.2887491260064055
+  :method_containers:
+  - :name: PostPolicy
+    :path: app/policies/post_policy.rb
+    :total_score: 55.45192246564974
+    :highest_score: 27.882073093656437
+    :average_score: 9.24198707760829
+    :methods:
+      PostPolicy#resolve:
+        :operators:
+          :branch: 4.6000000000000005
+          :user: 7.700000000000001
+          :present?: 2.5000000000000004
+          :editor?: 1.2000000000000002
+          :scope: 6.300000000000001
+          :all: 1.2000000000000002
+          :author?: 1.3000000000000003
+          :id: 1.7000000000000002
+          :where: 2.8000000000000007
+          :published: 1.5000000000000002
+          :|: 1.3000000000000003
+        :score: 27.882073093656437
+        :path: app/policies/post_policy.rb:24
+      PostPolicy#update?:
+        :operators:
+          :branch: 2.1
+          :user: 4.0
+          :present?: 1.0
+          :post: 1.4000000000000001
+          :authored_by?: 1.2000000000000002
+          :editor?: 1.2000000000000002
+        :score: 9.047098982546837
+        :path: app/policies/post_policy.rb:14
+      PostPolicy#create?:
+        :operators:
+          :branch: 2.1
+          :user: 4.0
+          :present?: 1.0
+          :author?: 1.2000000000000002
+          :editor?: 1.2000000000000002
+        :score: 7.692203845452875
+        :path: app/policies/post_policy.rb:10
+      PostPolicy#publish?:
+        :operators:
+          :branch: 1.0
+          :user: 2.5
+          :present?: 1.0
+          :editor?: 1.1
+        :score: 4.707440918375927
+        :path: app/policies/post_policy.rb:19
+      PostPolicy#none:
+        :operators:
+          :attr_reader: 1.0
+          :alias_method: 2.0
+          :branch: 1.0
+          :new: 1.0
+        :score: 4.123105625617661
+        :path: 
+      PostPolicy#initialize:
+        :operators:
+          :assignment: 2.0
+        :score: 2.0
+        :path: app/policies/post_policy.rb:5
+  - :name: PostsController
+    :path: app/controllers/posts_controller.rb
+    :total_score: 83.18048608915223
+    :highest_score: 23.39081016125778
+    :average_score: 8.318048608915223
+    :methods:
+      PostsController#create:
+        :operators:
+          :assignment: 1.0
+          :post_params: 1.2
+          :new: 1.0
+          :authorize: 1.0
+          :branch: 7.3000000000000025
+          :respond_to: 1.0
+          :save: 1.1
+          :current_user: 1.7000000000000002
+          :posts: 1.5000000000000002
+          :<<: 1.3000000000000003
+          :html: 2.6000000000000005
+          :redirect_to: 1.4000000000000004
+          :json: 2.6000000000000005
+          :render: 4.200000000000001
+          :errors: 1.6000000000000003
+        :score: 23.39081016125778
+        :path: app/controllers/posts_controller.rb:46
+      PostsController#update:
+        :operators:
+          :authorize: 1.0
+          :branch: 7.3000000000000025
+          :respond_to: 1.0
+          :post_params: 1.3
+          :update_attributes: 1.1
+          :html: 2.6000000000000005
+          :redirect_to: 1.4000000000000004
+          :json: 2.6000000000000005
+          :head: 1.4000000000000004
+          :render: 2.8000000000000007
+          :errors: 1.6000000000000003
+        :score: 18.317477992343818
+        :path: app/controllers/posts_controller.rb:65
+      PostsController#destroy:
+        :operators:
+          :authorize: 1.0
+          :destroy: 1.0
+          :branch: 3.4000000000000004
+          :respond_to: 1.0
+          :html: 1.2000000000000002
+          :posts_url: 1.5000000000000002
+          :redirect_to: 1.3000000000000003
+          :json: 1.2000000000000002
+          :head: 1.3000000000000003
+        :score: 10.090094152187085
+        :path: app/controllers/posts_controller.rb:82
+      PostsController#show:
+        :operators:
+          :assignment: 3.0
+          :comments: 1.0
+          :new: 1.0
+          :branch: 2.2
+          :respond_to: 1.0
+          :html: 1.2000000000000002
+          :json: 1.2000000000000002
+          :render: 1.3000000000000003
+        :score: 7.663550091178371
+        :path: app/controllers/posts_controller.rb:18
+      PostsController#index:
+        :operators:
+          :assignment: 1.0
+          :policy_scope: 1.0
+          :branch: 2.2
+          :respond_to: 1.0
+          :html: 1.2000000000000002
+          :json: 1.2000000000000002
+          :render: 1.3000000000000003
+        :score: 6.1911226768656435
+        :path: app/controllers/posts_controller.rb:8
+      PostsController#new:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+          :branch: 2.2
+          :respond_to: 1.0
+          :html: 1.2000000000000002
+          :json: 1.2000000000000002
+          :render: 1.3000000000000003
+        :score: 6.1911226768656435
+        :path: app/controllers/posts_controller.rb:30
+      PostsController#set_post:
+        :operators:
+          :assignment: 1.0
+          :params: 1.4
+          :[]: 1.2
+          :find: 1.0
+        :score: 3.7363083384538807
+        :path: app/controllers/posts_controller.rb:94
+      PostsController#post_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/posts_controller.rb:98
+      PostsController#none:
+        :operators:
+          :before_filter: 2.0
+          :private: 1.0
+        :score: 3.0
+        :path: 
+      PostsController#edit:
+        :operators:
+          :authorize: 1.0
+        :score: 1.0
+        :path: app/controllers/posts_controller.rb:40
+  - :name: OmniauthCallbacksController
+    :path: app/controllers/omniauth_callbacks_controller.rb
+    :total_score: 18.583123951777
+    :highest_score: 16.583123951777
+    :average_score: 9.2915619758885
+    :methods:
+      OmniauthCallbacksController#all:
+        :operators:
+          :assignment: 3.4000000000000004
+          :request: 1.5999999999999999
+          :env: 1.4
+          :[]: 1.2
+          :from_omniauth: 1.0
+          :branch: 1.0
+          :persisted?: 1.0
+          :flash: 1.2000000000000002
+          :name: 2.6000000000000005
+          :sign_in_and_redirect: 1.2000000000000002
+          :session: 1.2000000000000002
+          :attributes: 1.2000000000000002
+          :new_user_registration_url: 1.4000000000000001
+          :redirect_to: 1.2000000000000002
+        :score: 16.583123951777
+        :path: app/controllers/omniauth_callbacks_controller.rb:2
+      OmniauthCallbacksController#none:
+        :operators:
+          :alias_method: 2.0
+        :score: 2.0
+        :path: 
+  - :name: CommentsController
+    :path: app/controllers/comments_controller.rb
+    :total_score: 29.741741359553025
+    :highest_score: 12.4370414488334
+    :average_score: 7.435435339888256
+    :methods:
+      CommentsController#create:
+        :operators:
+          :assignment: 2.2
+          :comments: 1.2
+          :comment_params: 1.2
+          :new: 1.0
+          :branch: 1.0
+          :save: 1.0
+          :flash: 1.2000000000000002
+          :redirect_to: 1.2000000000000002
+          :singularize: 1.6
+          :to_sym: 1.4000000000000001
+          :instance_variable_set: 1.2000000000000002
+          :render: 1.2000000000000002
+        :score: 12.4370414488334
+        :path: app/controllers/comments_controller.rb:5
+      CommentsController#load_commentable:
+        :operators:
+          :assignment: 4.0
+          :request: 1.5999999999999999
+          :path: 1.4
+          :split: 1.2
+          :lit_fixnum: 0.6
+          :[]: 1.0
+          :singularize: 1.5999999999999999
+          :classify: 1.4
+          :constantize: 1.2
+          :find: 1.0
+        :score: 11.704699910719622
+        :path: app/controllers/comments_controller.rb:27
+      CommentsController#comment_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/comments_controller.rb:18
+      CommentsController#none:
+        :operators:
+          :before_filter: 1.0
+          :private: 1.0
+        :score: 2.0
+        :path: 
+  - :name: User::from_omniauth
+    :path: app/models/user.rb
+    :total_score: 10.95810202544218
+    :highest_score: 10.95810202544218
+    :average_score: 10.95810202544218
+    :methods:
+      User::from_omniauth:
+        :operators:
+          :branch: 1.0
+          :slice: 1.4
+          :where: 1.2
+          :first_or_create: 1.0
+          :assignment: 4.800000000000001
+          :provider: 1.2000000000000002
+          :uid: 1.2000000000000002
+          :info: 1.4000000000000001
+          :nickname: 1.2000000000000002
+          :name: 1.2000000000000002
+        :score: 10.95810202544218
+        :path: app/models/user.rb:24
+  - :name: ApplicationController
+    :path: app/controllers/application_controller.rb
+    :total_score: 19.144003500549008
+    :highest_score: 7.9548727205405365
+    :average_score: 4.786000875137252
+    :methods:
+      ApplicationController#user_not_authorized:
+        :operators:
+          :assignment: 1.0
+          :flash: 1.0
+          :branch: 1.2
+          :request: 1.7
+          :headers: 1.5
+          :[]: 1.3
+          :root_path: 1.3
+          :redirect_to: 1.0
+        :score: 7.9548727205405365
+        :path: app/controllers/application_controller.rb:27
+      ApplicationController#none:
+        :operators:
+          :include: 2.0
+          :protect_from_forgery: 1.0
+          :rescue_from: 1.0
+          :before_filter: 1.0
+          :private: 1.0
+        :score: 6.0
+        :path: 
+      ApplicationController#set_locale:
+        :operators:
+          :assignment: 1.0
+          :branch: 1.0
+          :params: 1.3
+          :[]: 1.1
+          :default_locale: 1.1
+        :score: 3.7749172176353754
+        :path: app/controllers/application_controller.rb:14
+      ApplicationController#default_url_options:
+        :operators:
+          :assignment: 1.0
+          :locale: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/application_controller.rb:18
+  - :name: ProjectsController
+    :path: app/controllers/projects_controller.rb
+    :total_score: 27.404991968985
+    :highest_score: 7.122499561249549
+    :average_score: 3.425623996123125
+    :methods:
+      ProjectsController#create:
+        :operators:
+          :assignment: 2.2
+          :project_params: 1.2
+          :new: 1.0
+          :branch: 1.0
+          :save: 1.0
+          :flash: 1.2000000000000002
+          :redirect_to: 1.2000000000000002
+          :render: 1.1
+        :score: 7.122499561249549
+        :path: app/controllers/projects_controller.rb:13
+      ProjectsController#update:
+        :operators:
+          :branch: 1.0
+          :project_params: 1.2
+          :update_attributes: 1.0
+          :redirect_to: 1.1
+          :render: 1.1
+        :score: 4.512205669071391
+        :path: app/controllers/projects_controller.rb:32
+      ProjectsController#set_project:
+        :operators:
+          :assignment: 1.0
+          :params: 1.4
+          :[]: 1.2
+          :find: 1.0
+        :score: 3.7363083384538807
+        :path: app/controllers/projects_controller.rb:42
+      ProjectsController#show:
+        :operators:
+          :assignment: 3.0
+          :comments: 1.0
+          :new: 1.0
+        :score: 3.605551275463989
+        :path: app/controllers/projects_controller.rb:23
+      ProjectsController#project_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/projects_controller.rb:46
+      ProjectsController#none:
+        :operators:
+          :before_filter: 1.0
+          :private: 1.0
+        :score: 2.0
+        :path: 
+      ProjectsController#new:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/projects_controller.rb:9
+      ProjectsController#index:
+        :operators:
+          :assignment: 1.0
+          :all: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/projects_controller.rb:5
+  - :name: ApplicationPolicy
+    :path: app/policies/application_policy.rb
+    :total_score: 16.4
+    :highest_score: 6.6000000000000005
+    :average_score: 2.733333333333333
+    :methods:
+      ApplicationPolicy#show?:
+        :operators:
+          :scope: 1.4
+          :record: 1.5999999999999999
+          :id: 1.4
+          :where: 1.2
+          :exists?: 1.0
+        :score: 6.6000000000000005
+        :path: app/policies/application_policy.rb:13
+      ApplicationPolicy#scope:
+        :operators:
+          :user: 1.2
+          :record: 1.4
+          :class: 1.2
+          :policy_scope!: 1.0
+        :score: 4.8
+        :path: app/policies/application_policy.rb:37
+      ApplicationPolicy#initialize:
+        :operators:
+          :assignment: 2.0
+        :score: 2.0
+        :path: app/policies/application_policy.rb:4
+      ApplicationPolicy#new?:
+        :operators:
+          :create?: 1.0
+        :score: 1.0
+        :path: app/policies/application_policy.rb:21
+      ApplicationPolicy#none:
+        :operators:
+          :attr_reader: 1.0
+        :score: 1.0
+        :path: 
+      ApplicationPolicy#edit?:
+        :operators:
+          :update?: 1.0
+        :score: 1.0
+        :path: app/policies/application_policy.rb:29
+  - :name: ApplicationHelper
+    :path: app/helpers/application_helper.rb
+    :total_score: 5.4
+    :highest_score: 5.4
+    :average_score: 5.4
+    :methods:
+      ApplicationHelper#flash_class:
+        :operators:
+          :branch: 5.4
+        :score: 5.4
+        :path: app/helpers/application_helper.rb:4
+  - :name: User::new_with_session
+    :path: app/models/user.rb
+    :total_score: 5.309425580983314
+    :highest_score: 5.309425580983314
+    :average_score: 5.309425580983314
+    :methods:
+      User::new_with_session:
+        :operators:
+          :branch: 2.1
+          :[]: 2.3
+          :new: 1.1
+          :assignment: 1.3000000000000003
+          :valid?: 1.3000000000000003
+        :score: 5.309425580983314
+        :path: app/models/user.rb:33
+  - :name: Post
+    :path: app/models/post.rb
+    :total_score: 8.814213562373096
+    :highest_score: 5.2
+    :average_score: 2.9380711874576986
+    :methods:
+      Post#none:
+        :operators:
+          :belongs_to: 1.0
+          :has_many: 1.0
+          :where: 1.2
+          :scope: 1.0
+          :translates: 1.0
+        :score: 5.2
+        :path: 
+      Post#authored_by?:
+        :operators:
+          :author: 1.2
+          :==: 1.0
+        :score: 2.2
+        :path: app/models/post.rb:12
+      Post#publish!:
+        :operators:
+          :assignment: 1.0
+          :save!: 1.0
+        :score: 1.4142135623730951
+        :path: app/models/post.rb:7
+  - :name: Project
+    :path: ''
+    :total_score: 4.0
+    :highest_score: 4.0
+    :average_score: 4.0
+    :methods:
+      Project#none:
+        :operators:
+          :attr_accessible: 1.0
+          :validates: 2.0
+          :has_many: 1.0
+        :score: 4.0
+        :path: 
+  - :name: Comment
+    :path: ''
+    :total_score: 4.0
+    :highest_score: 4.0
+    :average_score: 4.0
+    :methods:
+      Comment#none:
+        :operators:
+          :belongs_to: 1.0
+          :validates: 3.0
+        :score: 4.0
+        :path: 
+  - :name: Users::PasswordsController
+    :path: app/controllers/users/passwords_controller.rb
+    :total_score: 4.6
+    :highest_score: 3.5999999999999996
+    :average_score: 2.3
+    :methods:
+      Users::PasswordsController#resource_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/users/passwords_controller.rb:2
+      Users::PasswordsController#none:
+        :operators:
+          :private: 1.0
+        :score: 1.0
+        :path: 
+  - :name: Users::RegistrationsController
+    :path: app/controllers/users/registrations_controller.rb
+    :total_score: 6.6
+    :highest_score: 3.5999999999999996
+    :average_score: 1.65
+    :methods:
+      Users::RegistrationsController#sign_up_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/users/registrations_controller.rb:18
+      Users::RegistrationsController#none:
+        :operators:
+          :private: 1.0
+        :score: 1.0
+        :path: 
+      Users::RegistrationsController#build_resource:
+        :operators:
+          :puts: 1.0
+        :score: 1.0
+        :path: app/controllers/users/registrations_controller.rb:9
+      Users::RegistrationsController#create:
+        :operators:
+          :puts: 1.0
+        :score: 1.0
+        :path: app/controllers/users/registrations_controller.rb:3
+  - :name: User
+    :path: app/models/user.rb
+    :total_score: 12.448187929913335
+    :highest_score: 3.448187929913334
+    :average_score: 2.489637585982667
+    :methods:
+      User#update_with_password:
+        :operators:
+          :branch: 1.0
+          :encrypted_password: 1.2
+          :blank?: 1.0
+          :update_attributes: 1.1
+        :score: 3.448187929913334
+        :path: app/models/user.rb:48
+      User#password_required?:
+        :operators:
+          :branch: 1.0
+          :provider: 1.3
+          :blank?: 1.1
+        :score: 2.6
+        :path: app/models/user.rb:44
+      User#editor?:
+        :operators:
+          :role: 1.2
+          :==: 1.0
+        :score: 2.2
+        :path: app/models/user.rb:20
+      User#author?:
+        :operators:
+          :role: 1.2
+          :==: 1.0
+        :score: 2.2
+        :path: app/models/user.rb:16
+      User#none:
+        :operators:
+          :devise: 1.0
+          :has_many: 1.0
+        :score: 2.0
+        :path: 
+:stats:
+  :codeLOC: 274
+  :testLOC: 0
+  :code_to_test_ratio: 0.0
+  :lines:
+  - :name: Controllers
+    :lines: 263
+    :loc: 194
+    :classes: 8
+    :methods: 29
+    :methods_per_class: 3
+    :loc_per_method: 4
+  - :name: Helpers
+    :lines: 12
+    :loc: 10
+    :classes: 0
+    :methods: 1
+    :methods_per_class: 0
+    :loc_per_method: 8
+  - :name: Models
+    :lines: 98
+    :loc: 64
+    :classes: 4
+    :methods: 8
+    :methods_per_class: 2
+    :loc_per_method: 6
+  - :name: Mailers
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Javascripts
+    :lines: 35
+    :loc: 6
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Libraries
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Total
+    :lines: 408
+    :loc: 274
+    :classes: 12
+    :methods: 38
+    :methods_per_class: 3
+    :loc_per_method: 5
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: PostsController
+      :complexity: 30
+      :lines: 99
+      :methods:
+      - :name: PostsController#create
+        :complexity: 7
+        :lines: 15
+      - :name: PostsController#update
+        :complexity: 7
+        :lines: 13
+      - :name: PostsController#destroy
+        :complexity: 4
+        :lines: 8
+      - :name: PostsController#index
+        :complexity: 3
+        :lines: 6
+      - :name: PostsController#new
+        :complexity: 3
+        :lines: 7
+      - :name: PostsController#show
+        :complexity: 3
+        :lines: 8
+      - :name: PostsController#set_post
+        :complexity: 1
+        :lines: 2
+      - :name: PostsController#edit
+        :complexity: 1
+        :lines: 2
+      - :name: PostsController#post_params
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/posts_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: PostPolicy
+      :complexity: 11
+      :lines: 32
+      :methods:
+      - :name: PostPolicy#resolve
+        :complexity: 3
+        :lines: 8
+      - :name: PostPolicy#update?
+        :complexity: 2
+        :lines: 2
+      - :name: PostPolicy#publish?
+        :complexity: 2
+        :lines: 2
+      - :name: PostPolicy#create?
+        :complexity: 2
+        :lines: 2
+      - :name: PostPolicy#initialize
+        :complexity: 1
+        :lines: 3
+    :filename: app/policies/post_policy.rb
+  - :classes:
+    - :class_name: User
+      :complexity: 10
+      :lines: 54
+      :methods:
+      - :name: User#self.new_with_session
+        :complexity: 3
+        :lines: 9
+      - :name: User#update_with_password
+        :complexity: 2
+        :lines: 6
+      - :name: User#self.from_omniauth
+        :complexity: 2
+        :lines: 7
+      - :name: User#password_required?
+        :complexity: 1
+        :lines: 2
+      - :name: User#editor?
+        :complexity: 1
+        :lines: 2
+      - :name: User#author?
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/user.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ProjectsController
+      :complexity: 10
+      :lines: 48
+      :methods:
+      - :name: ProjectsController#create
+        :complexity: 2
+        :lines: 8
+      - :name: ProjectsController#update
+        :complexity: 2
+        :lines: 6
+      - :name: ProjectsController#edit
+        :complexity: 1
+        :lines: 1
+      - :name: ProjectsController#set_project
+        :complexity: 1
+        :lines: 2
+      - :name: ProjectsController#show
+        :complexity: 1
+        :lines: 4
+      - :name: ProjectsController#project_params
+        :complexity: 1
+        :lines: 2
+      - :name: ProjectsController#new
+        :complexity: 1
+        :lines: 2
+      - :name: ProjectsController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/projects_controller.rb
+  - :classes:
+    - :class_name: ApplicationPolicy
+      :complexity: 9
+      :lines: 39
+      :methods:
+      - :name: ApplicationPolicy#scope
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#destroy?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#edit?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#update?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#new?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#create?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#show?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#index?
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationPolicy#initialize
+        :complexity: 1
+        :lines: 3
+    :filename: app/policies/application_policy.rb
+  - :classes:
+    - :class_name: ApplicationHelper
+      :complexity: 5
+      :lines: 11
+      :methods:
+      - :name: ApplicationHelper#flash_class
+        :complexity: 5
+        :lines: 7
+    :filename: app/helpers/application_helper.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: CommentsController
+      :complexity: 4
+      :lines: 29
+      :methods:
+      - :name: CommentsController#create
+        :complexity: 2
+        :lines: 9
+      - :name: CommentsController#comment_params
+        :complexity: 1
+        :lines: 7
+      - :name: CommentsController#load_commentable
+        :complexity: 1
+        :lines: 3
+    :filename: app/controllers/comments_controller.rb
+  - :classes:
+    - :class_name: ApplicationController
+      :complexity: 3
+      :lines: 30
+      :methods:
+      - :name: ApplicationController#user_not_authorized
+        :complexity: 1
+        :lines: 3
+      - :name: ApplicationController#default_url_options
+        :complexity: 1
+        :lines: 2
+      - :name: ApplicationController#set_locale
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/application_controller.rb
+  - :classes:
+    - :class_name: Users
+      :complexity: 3
+      :lines: 21
+      :methods:
+      - :name: Users#sign_up_params
+        :complexity: 1
+        :lines: 2
+      - :name: Users#build_resource
+        :complexity: 1
+        :lines: 7
+      - :name: Users#create
+        :complexity: 1
+        :lines: 4
+    :filename: app/controllers/users/registrations_controller.rb
+  - :classes:
+    - :class_name: Post
+      :complexity: 2
+      :lines: 14
+      :methods:
+      - :name: Post#authored_by?
+        :complexity: 1
+        :lines: 2
+      - :name: Post#publish!
+        :complexity: 1
+        :lines: 3
+    :filename: app/models/post.rb
+  - :classes:
+    - :class_name: OmniauthCallbacksController
+      :complexity: 2
+      :lines: 12
+      :methods:
+      - :name: OmniauthCallbacksController#all
+        :complexity: 2
+        :lines: 9
+    :filename: app/controllers/omniauth_callbacks_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::Toggle'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::Toggle::Collect'
+      :complexity: 1
+      :lines: 7
+      :methods: []
+    - :class_name: '::About'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/layouts/application.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: HomeController
+      :complexity: 1
+      :lines: 3
+      :methods:
+      - :name: HomeController#index
+        :complexity: 1
+        :lines: 1
+    :filename: app/controllers/home_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/posts/show.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/shared/_links.erb
+  - :classes:
+    - :class_name: Indicators
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: 'Indicators::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Indicators::::Wrapper
+      :complexity: 1
+      :lines: 16
+      :methods: []
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/shared/_carousel.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Modern'
+      :complexity: 1
+      :lines: 7
+      :methods: []
+    :filename: app/views/shared/_image_right.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 7
+      :methods: []
+    :filename: app/views/devise/registrations/edit.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::Toggle'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::Toggle::Collect'
+      :complexity: 1
+      :lines: 17
+      :methods: []
+    - :class_name: '::About'
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    - :class_name: '::About::Other'
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    - :class_name: '::About::Other::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::About::Other::::Full'
+      :complexity: 0
+      :lines: 7
+      :methods: []
+    :filename: app/views/shared/_nav.html.erb
+  - :classes:
+    - :class_name: Users
+      :complexity: 1
+      :lines: 5
+      :methods:
+      - :name: Users#resource_params
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/users/passwords_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/mailer/unlock_instructions.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/comments/_form.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/mailer/reset_password_instructions.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/mailer/confirmation_instructions.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/registrations/new.html.erb
+  - :classes:
+    - :class_name: Project
+      :complexity: 0
+      :lines: 5
+      :methods: []
+    :filename: app/models/project.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/sessions/new.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Comment
+      :complexity: 0
+      :lines: 15
+      :methods: []
+    :filename: app/models/comment.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/posts/_form.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/views/posts/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/projects/_form.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/views/projects/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::Copyright'
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/views/shared/_footer.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::Bootstrap'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/shared/_grey_row_with_button.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::::Bootstrap'
+      :complexity: 0
+      :lines: 14
+      :methods: []
+    :filename: app/views/shared/_image_left.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: '::::::Display::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::::Display::::::::::::::::::::::::'
+      :complexity: 0
+      :lines: 6
+      :methods: []
+    :filename: app/views/shared/_portfolio_section.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: '::::The'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/shared/_three_column.html.erb
+  :classes:
+  - :name: PostsController
+    :complexity: 30
+    :lines: 99
+    :defs:
+    - :name: PostsController#index
+      :complexity: 3
+      :lines: 6
+    - :name: PostsController#show
+      :complexity: 3
+      :lines: 8
+    - :name: PostsController#new
+      :complexity: 3
+      :lines: 7
+    - :name: PostsController#edit
+      :complexity: 1
+      :lines: 2
+    - :name: PostsController#create
+      :complexity: 7
+      :lines: 15
+    - :name: PostsController#update
+      :complexity: 7
+      :lines: 13
+    - :name: PostsController#destroy
+      :complexity: 4
+      :lines: 8
+    - :name: PostsController#set_post
+      :complexity: 1
+      :lines: 2
+    - :name: PostsController#post_params
+      :complexity: 1
+      :lines: 2
+  - :name: PostPolicy
+    :complexity: 11
+    :lines: 32
+    :defs:
+    - :name: PostPolicy#initialize
+      :complexity: 1
+      :lines: 3
+    - :name: PostPolicy#create?
+      :complexity: 2
+      :lines: 2
+    - :name: PostPolicy#update?
+      :complexity: 2
+      :lines: 2
+    - :name: PostPolicy#publish?
+      :complexity: 2
+      :lines: 2
+    - :name: PostPolicy#resolve
+      :complexity: 3
+      :lines: 8
+  - :name: User
+    :complexity: 10
+    :lines: 54
+    :defs:
+    - :name: User#author?
+      :complexity: 1
+      :lines: 2
+    - :name: User#editor?
+      :complexity: 1
+      :lines: 2
+    - :name: User#self.from_omniauth
+      :complexity: 2
+      :lines: 7
+    - :name: User#self.new_with_session
+      :complexity: 3
+      :lines: 9
+    - :name: User#password_required?
+      :complexity: 1
+      :lines: 2
+    - :name: User#update_with_password
+      :complexity: 2
+      :lines: 6
+  - :name: ProjectsController
+    :complexity: 10
+    :lines: 48
+    :defs:
+    - :name: ProjectsController#index
+      :complexity: 1
+      :lines: 2
+    - :name: ProjectsController#new
+      :complexity: 1
+      :lines: 2
+    - :name: ProjectsController#create
+      :complexity: 2
+      :lines: 8
+    - :name: ProjectsController#show
+      :complexity: 1
+      :lines: 4
+    - :name: ProjectsController#edit
+      :complexity: 1
+      :lines: 1
+    - :name: ProjectsController#update
+      :complexity: 2
+      :lines: 6
+    - :name: ProjectsController#set_project
+      :complexity: 1
+      :lines: 2
+    - :name: ProjectsController#project_params
+      :complexity: 1
+      :lines: 2
+  - :name: ApplicationPolicy
+    :complexity: 9
+    :lines: 39
+    :defs:
+    - :name: ApplicationPolicy#initialize
+      :complexity: 1
+      :lines: 3
+    - :name: ApplicationPolicy#index?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#show?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#create?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#new?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#update?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#edit?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#destroy?
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationPolicy#scope
+      :complexity: 1
+      :lines: 2
+  - :name: ApplicationHelper
+    :complexity: 5
+    :lines: 11
+    :defs:
+    - :name: ApplicationHelper#flash_class
+      :complexity: 5
+      :lines: 7
+  - :name: CommentsController
+    :complexity: 4
+    :lines: 29
+    :defs:
+    - :name: CommentsController#create
+      :complexity: 2
+      :lines: 9
+    - :name: CommentsController#comment_params
+      :complexity: 1
+      :lines: 7
+    - :name: CommentsController#load_commentable
+      :complexity: 1
+      :lines: 3
+  - :name: ApplicationController
+    :complexity: 3
+    :lines: 30
+    :defs:
+    - :name: ApplicationController#set_locale
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationController#default_url_options
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationController#user_not_authorized
+      :complexity: 1
+      :lines: 3
+  - :name: Users
+    :complexity: 3
+    :lines: 21
+    :defs:
+    - :name: Users#create
+      :complexity: 1
+      :lines: 4
+    - :name: Users#build_resource
+      :complexity: 1
+      :lines: 7
+    - :name: Users#sign_up_params
+      :complexity: 1
+      :lines: 2
+  - :name: Post
+    :complexity: 2
+    :lines: 14
+    :defs:
+    - :name: Post#publish!
+      :complexity: 1
+      :lines: 3
+    - :name: Post#authored_by?
+      :complexity: 1
+      :lines: 2
+  - :name: OmniauthCallbacksController
+    :complexity: 2
+    :lines: 12
+    :defs:
+    - :name: OmniauthCallbacksController#all
+      :complexity: 2
+      :lines: 9
+  - :name: '::::::::Toggle::Collect'
+    :complexity: 1
+    :lines: 7
+  - :name: HomeController
+    :complexity: 1
+    :lines: 3
+    :defs:
+    - :name: HomeController#index
+      :complexity: 1
+      :lines: 1
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: Indicators::::Wrapper
+    :complexity: 1
+    :lines: 16
+  - :name: '::::::Modern'
+    :complexity: 1
+    :lines: 7
+  - :name: ''
+    :complexity: 1
+    :lines: 7
+  - :name: '::::::::Toggle::Collect'
+    :complexity: 1
+    :lines: 17
+  - :name: Users
+    :complexity: 1
+    :lines: 5
+    :defs:
+    - :name: Users#resource_params
+      :complexity: 1
+      :lines: 2
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: '::::Bootstrap'
+    :complexity: 0
+    :lines: 2
+  - :name: '::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: '::::Copyright'
+    :complexity: 0
+    :lines: 4
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 4
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: '::'
+    :complexity: 0
+    :lines: 4
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: Comment
+    :complexity: 0
+    :lines: 15
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: Project
+    :complexity: 0
+    :lines: 5
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: '::::::::Bootstrap'
+    :complexity: 0
+    :lines: 14
+  - :name: '::About::Other::::Full'
+    :complexity: 0
+    :lines: 7
+  - :name: '::About::Other::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::About::Other'
+    :complexity: 0
+    :lines: 0
+  - :name: '::About'
+    :complexity: 0
+    :lines: 4
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: '::::::::Toggle'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 2
+  - :name: '::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: '::::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::'
+    :complexity: 0
+    :lines: 2
+  - :name: '::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::'
+    :complexity: 0
+    :lines: 2
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display'
+    :complexity: 0
+    :lines: 2
+  - :name: 'Indicators::'
+    :complexity: 0
+    :lines: 1
+  - :name: Indicators
+    :complexity: 0
+    :lines: 2
+  - :name: '::::::Display::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::About'
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::::Toggle'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: '::::::Display::::::::::::::::::::::::'
+    :complexity: 0
+    :lines: 6
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: '::::The'
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  :methods:
+  - :name: PostsController#create
+    :complexity: 7
+    :lines: 15
+  - :name: PostsController#update
+    :complexity: 7
+    :lines: 13
+  - :name: ApplicationHelper#flash_class
+    :complexity: 5
+    :lines: 7
+  - :name: PostsController#destroy
+    :complexity: 4
+    :lines: 8
+  - :name: PostsController#index
+    :complexity: 3
+    :lines: 6
+  - :name: PostsController#new
+    :complexity: 3
+    :lines: 7
+  - :name: PostsController#show
+    :complexity: 3
+    :lines: 8
+  - :name: User#self.new_with_session
+    :complexity: 3
+    :lines: 9
+  - :name: PostPolicy#resolve
+    :complexity: 3
+    :lines: 8
+  - :name: PostPolicy#update?
+    :complexity: 2
+    :lines: 2
+  - :name: PostPolicy#publish?
+    :complexity: 2
+    :lines: 2
+  - :name: User#self.from_omniauth
+    :complexity: 2
+    :lines: 7
+  - :name: PostPolicy#create?
+    :complexity: 2
+    :lines: 2
+  - :name: CommentsController#create
+    :complexity: 2
+    :lines: 9
+  - :name: OmniauthCallbacksController#all
+    :complexity: 2
+    :lines: 9
+  - :name: User#update_with_password
+    :complexity: 2
+    :lines: 6
+  - :name: ProjectsController#create
+    :complexity: 2
+    :lines: 8
+  - :name: ProjectsController#update
+    :complexity: 2
+    :lines: 6
+  - :name: ProjectsController#set_project
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#new?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#create?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#show?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#index?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#initialize
+    :complexity: 1
+    :lines: 3
+  - :name: ProjectsController#project_params
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#update?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#edit?
+    :complexity: 1
+    :lines: 2
+  - :name: ProjectsController#edit
+    :complexity: 1
+    :lines: 1
+  - :name: ProjectsController#show
+    :complexity: 1
+    :lines: 4
+  - :name: ApplicationPolicy#destroy?
+    :complexity: 1
+    :lines: 2
+  - :name: ProjectsController#new
+    :complexity: 1
+    :lines: 2
+  - :name: ProjectsController#index
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationPolicy#scope
+    :complexity: 1
+    :lines: 2
+  - :name: User#password_required?
+    :complexity: 1
+    :lines: 2
+  - :name: CommentsController#comment_params
+    :complexity: 1
+    :lines: 7
+  - :name: CommentsController#load_commentable
+    :complexity: 1
+    :lines: 3
+  - :name: User#editor?
+    :complexity: 1
+    :lines: 2
+  - :name: User#author?
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationController#set_locale
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationController#default_url_options
+    :complexity: 1
+    :lines: 2
+  - :name: ApplicationController#user_not_authorized
+    :complexity: 1
+    :lines: 3
+  - :name: Users#create
+    :complexity: 1
+    :lines: 4
+  - :name: PostPolicy#initialize
+    :complexity: 1
+    :lines: 3
+  - :name: PostsController#post_params
+    :complexity: 1
+    :lines: 2
+  - :name: PostsController#set_post
+    :complexity: 1
+    :lines: 2
+  - :name: Users#build_resource
+    :complexity: 1
+    :lines: 7
+  - :name: Users#sign_up_params
+    :complexity: 1
+    :lines: 2
+  - :name: Post#publish!
+    :complexity: 1
+    :lines: 3
+  - :name: PostsController#edit
+    :complexity: 1
+    :lines: 2
+  - :name: Post#authored_by?
+    :complexity: 1
+    :lines: 2
+  - :name: HomeController#index
+    :complexity: 1
+    :lines: 1
+  - :name: Users#resource_params
+    :complexity: 1
+    :lines: 2
+:reek:
+  :matches:
+  - :file_path: app/controllers/application_controller.rb
+    :code_smells:
+    - :method: ApplicationController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: ApplicationController#default_url_options
+      :message: has unused parameter 'options'
+      :type: UnusedParameters
+  - :file_path: app/controllers/comments_controller.rb
+    :code_smells: []
+  - :file_path: app/controllers/home_controller.rb
+    :code_smells: []
+  - :file_path: app/controllers/omniauth_callbacks_controller.rb
+    :code_smells:
+    - :method: OmniauthCallbacksController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: OmniauthCallbacksController#all
+      :message: calls user.name twice
+      :type: DuplicateMethodCall
+  - :file_path: app/controllers/posts_controller.rb
+    :code_smells:
+    - :method: PostsController#create
+      :message: calls format.html twice
+      :type: DuplicateMethodCall
+    - :method: PostsController#create
+      :message: calls format.json twice
+      :type: DuplicateMethodCall
+    - :method: PostsController#create
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: PostsController#create
+      :message: has approx 7 statements
+      :type: TooManyStatements
+    - :method: PostsController#destroy
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: PostsController#index
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: PostsController#new
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: PostsController#show
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: PostsController#show
+      :message: has approx 6 statements
+      :type: TooManyStatements
+    - :method: PostsController#update
+      :message: calls format.html twice
+      :type: DuplicateMethodCall
+    - :method: PostsController#update
+      :message: calls format.json twice
+      :type: DuplicateMethodCall
+    - :method: PostsController#update
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+  - :file_path: app/controllers/projects_controller.rb
+    :code_smells: []
+  - :file_path: app/controllers/users/passwords_controller.rb
+    :code_smells:
+    - :method: Users::PasswordsController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/controllers/users/registrations_controller.rb
+    :code_smells:
+    - :method: Users::RegistrationsController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/helpers/application_helper.rb
+    :code_smells: []
+  - :file_path: app/models/comment.rb
+    :code_smells: []
+  - :file_path: app/models/post.rb
+    :code_smells:
+    - :method: Post
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/project.rb
+    :code_smells:
+    - :method: Project
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/user.rb
+    :code_smells:
+    - :method: User
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: User#self.new_with_session
+      :message: calls session["devise.user_attributes"] twice
+      :type: DuplicateMethodCall
+  - :file_path: app/policies/application_policy.rb
+    :code_smells:
+    - :method: ApplicationPolicy
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/policies/post_policy.rb
+    :code_smells:
+    - :method: PostPolicy
+      :message: tests user.present? at least 3 times
+      :type: RepeatedConditional
+    - :method: PostPolicy#resolve
+      :message: calls user.present? twice
+      :type: DuplicateMethodCall
+:roodi:
+  :total:
+  - Checked 15 files
+  :problems:
+  - :file: Running Roodi checks
+    :line: 
+    :problem: 
+  - :file: "\e[31mapp/helpers/application_helper.rb"
+    :line: '5'
+    :problem: "Case statement is missing an else clause.\e[0m"
+  - :file: "\e[31mapp/policies/post_policy.rb"
+    :line: '23'
+    :problem: "Block cyclomatic complexity is 5.  It should be 4 or less.\e[0m"
+:rails_best_practices:
+  :total:
+  - Found 29 errors.
+  :problems:
+  - :file: /Users/sean/portfolio2/db/schema.rb
+    :line: '16'
+    :problem: always add db index (comments => [commentable_id, commentable_type])
+    :url: http://rails-bestpractices.com/posts/21-always-add-db-index
+  - :file: /Users/sean/portfolio2/db/schema.rb
+    :line: '43'
+    :problem: always add db index (posts => [author_id])
+    :url: http://rails-bestpractices.com/posts/21-always-add-db-index
+  - :file: /Users/sean/portfolio2/app/views/posts/show.html.erb
+    :line: '6'
+    :problem: law of demeter
+    :url: http://rails-bestpractices.com/posts/15-the-law-of-demeter
+  - :file: /Users/sean/portfolio2/app/controllers/omniauth_callbacks_controller.rb
+    :line: '2'
+    :problem: move model logic into model (user use_count > 4)
+    :url: http://rails-bestpractices.com/posts/7-move-model-logic-into-the-model
+  - :file: /Users/sean/portfolio2/app/controllers/application_controller.rb
+    :line: '18'
+    :problem: remove unused methods (ApplicationController#default_url_options)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/controllers/users/passwords_controller.rb
+    :line: '2'
+    :problem: remove unused methods (Users::PasswordsController#resource_params)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/controllers/users/registrations_controller.rb
+    :line: '9'
+    :problem: remove unused methods (Users::RegistrationsController#build_resource)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/controllers/users/registrations_controller.rb
+    :line: '18'
+    :problem: remove unused methods (Users::RegistrationsController#sign_up_params)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/models/post.rb
+    :line: '7'
+    :problem: remove unused methods (Post#publish!)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/models/user.rb
+    :line: '33'
+    :problem: remove unused methods (User#new_with_session)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/models/user.rb
+    :line: '48'
+    :problem: remove unused methods (User#update_with_password)
+    :url: 
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '2'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '4'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '7'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '14'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '14'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/comments/_form.html.erb
+    :line: '32'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/posts/_form.html.erb
+    :line: '1'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/posts/_form.html.erb
+    :line: '2'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/posts/_form.html.erb
+    :line: '4'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/posts/_form.html.erb
+    :line: '7'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/projects/_form.html.erb
+    :line: '1'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/projects/_form.html.erb
+    :line: '2'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/projects/_form.html.erb
+    :line: '4'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/app/views/projects/_form.html.erb
+    :line: '7'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: /Users/sean/portfolio2/config/routes.rb
+    :line: '11'
+    :problem: 'restrict auto-generated routes posts/comments (only: [:create])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: /Users/sean/portfolio2/config/routes.rb
+    :line: '14'
+    :problem: 'restrict auto-generated routes projects (except: [:destroy])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: /Users/sean/portfolio2/config/routes.rb
+    :line: '15'
+    :problem: 'restrict auto-generated routes projects/comments (only: [:create])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: /Users/sean/portfolio2/app/controllers/comments_controller.rb
+    :line: '12'
+    :problem: simplify render in controllers
+    :url: http://rails-bestpractices.com/posts/62-simplify-render-in-controllers
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb:24
+      file_name: app/policies/post_policy.rb
+      line_number: '24'
+      hash_key: '["app/policies/post_policy.rb:24", nil, nil]'
+    details:
+      flog: complexity is 27.9
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:46
+      file_name: app/controllers/posts_controller.rb
+      line_number: '46'
+      hash_key: '["app/controllers/posts_controller.rb:46", nil, nil]'
+    details:
+      flog: complexity is 23.4
+      saikuro: complexity is 7.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:65
+      file_name: app/controllers/posts_controller.rb
+      line_number: '65'
+      hash_key: '["app/controllers/posts_controller.rb:65", nil, nil]'
+    details:
+      flog: complexity is 18.3
+      saikuro: complexity is 7.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb:2
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/omniauth_callbacks_controller.rb:2", nil, nil]'
+    details:
+      flog: complexity is 16.6
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/comments_controller.rb:5
+      file_name: app/controllers/comments_controller.rb
+      line_number: '5'
+      hash_key: '["app/controllers/comments_controller.rb:5", nil, nil]'
+    details:
+      flog: complexity is 12.4
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:82
+      file_name: app/controllers/posts_controller.rb
+      line_number: '82'
+      hash_key: '["app/controllers/posts_controller.rb:82", nil, nil]'
+    details:
+      flog: complexity is 10.1
+      saikuro: complexity is 4.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:24
+      file_name: app/models/user.rb
+      line_number: '24'
+      hash_key: '["app/models/user.rb:24", nil, nil]'
+    details:
+      flog: complexity is 11.0
+      saikuro: average complexity is 2.5
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/comments_controller.rb:27
+      file_name: app/controllers/comments_controller.rb
+      line_number: '27'
+      hash_key: '["app/controllers/comments_controller.rb:27", nil, nil]'
+    details:
+      flog: complexity is 11.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb:14
+      file_name: app/policies/post_policy.rb
+      line_number: '14'
+      hash_key: '["app/policies/post_policy.rb:14", nil, nil]'
+    details:
+      flog: complexity is 9.0
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:18
+      file_name: app/controllers/posts_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/posts_controller.rb:18", nil, nil]'
+    details:
+      flog: complexity is 7.7
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/helpers/application_helper.rb:4
+      file_name: app/helpers/application_helper.rb
+      line_number: '4'
+      hash_key: '["app/helpers/application_helper.rb:4", nil, nil]'
+    details:
+      flog: complexity is 5.4
+      saikuro: complexity is 5.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb:10
+      file_name: app/policies/post_policy.rb
+      line_number: '10'
+      hash_key: '["app/policies/post_policy.rb:10", nil, nil]'
+    details:
+      flog: complexity is 7.7
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:8
+      file_name: app/controllers/posts_controller.rb
+      line_number: '8'
+      hash_key: '["app/controllers/posts_controller.rb:8", nil, nil]'
+    details:
+      flog: complexity is 6.2
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:30
+      file_name: app/controllers/posts_controller.rb
+      line_number: '30'
+      hash_key: '["app/controllers/posts_controller.rb:30", nil, nil]'
+    details:
+      flog: complexity is 6.2
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb:27
+      file_name: app/controllers/application_controller.rb
+      line_number: '27'
+      hash_key: '["app/controllers/application_controller.rb:27", nil, nil]'
+    details:
+      flog: complexity is 8.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:13
+      file_name: app/controllers/projects_controller.rb
+      line_number: '13'
+      hash_key: '["app/controllers/projects_controller.rb:13", nil, nil]'
+    details:
+      flog: complexity is 7.1
+      saikuro: average complexity is 1.5
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", nil, nil]'
+    details:
+      flog: complexity is 6.6
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb:19
+      file_name: app/policies/post_policy.rb
+      line_number: '19'
+      hash_key: '["app/policies/post_policy.rb:19", nil, nil]'
+    details:
+      flog: complexity is 4.7
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:32
+      file_name: app/controllers/projects_controller.rb
+      line_number: '32'
+      hash_key: '["app/controllers/projects_controller.rb:32", nil, nil]'
+    details:
+      flog: complexity is 4.5
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb:37
+      file_name: app/policies/application_policy.rb
+      line_number: '37'
+      hash_key: '["app/policies/application_policy.rb:37", nil, nil]'
+    details:
+      flog: complexity is 4.8
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:48
+      file_name: app/models/user.rb
+      line_number: '48'
+      hash_key: '["app/models/user.rb:48", nil, nil]'
+    details:
+      flog: complexity is 3.4
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:33
+      file_name: app/models/user.rb
+      line_number: '33'
+      hash_key: '["app/models/user.rb:33", nil, nil]'
+    details:
+      flog: complexity is 5.3
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb:14
+      file_name: app/controllers/application_controller.rb
+      line_number: '14'
+      hash_key: '["app/controllers/application_controller.rb:14", nil, nil]'
+    details:
+      flog: complexity is 3.8
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:42
+      file_name: app/controllers/projects_controller.rb
+      line_number: '42'
+      hash_key: '["app/controllers/projects_controller.rb:42", nil, nil]'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:94
+      file_name: app/controllers/posts_controller.rb
+      line_number: '94'
+      hash_key: '["app/controllers/posts_controller.rb:94", nil, nil]'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:23
+      file_name: app/controllers/projects_controller.rb
+      line_number: '23'
+      hash_key: '["app/controllers/projects_controller.rb:23", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:46
+      file_name: app/controllers/projects_controller.rb
+      line_number: '46'
+      hash_key: '["app/controllers/projects_controller.rb:46", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/passwords_controller.rb:2
+      file_name: app/controllers/users/passwords_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/users/passwords_controller.rb:2", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:98
+      file_name: app/controllers/posts_controller.rb
+      line_number: '98'
+      hash_key: '["app/controllers/posts_controller.rb:98", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/comments_controller.rb:18
+      file_name: app/controllers/comments_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/comments_controller.rb:18", nil, nil]'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:44
+      file_name: app/models/user.rb
+      line_number: '44'
+      hash_key: '["app/models/user.rb:44", nil, nil]'
+    details:
+      flog: complexity is 2.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:20
+      file_name: app/models/user.rb
+      line_number: '20'
+      hash_key: '["app/models/user.rb:20", nil, nil]'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb:16
+      file_name: app/models/user.rb
+      line_number: '16'
+      hash_key: '["app/models/user.rb:16", nil, nil]'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/post.rb:12
+      file_name: app/models/post.rb
+      line_number: '12'
+      hash_key: '["app/models/post.rb:12", nil, nil]'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb:5
+      file_name: app/policies/post_policy.rb
+      line_number: '5'
+      hash_key: '["app/policies/post_policy.rb:5", nil, nil]'
+    details:
+      flog: complexity is 2.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb:4
+      file_name: app/policies/application_policy.rb
+      line_number: '4'
+      hash_key: '["app/policies/application_policy.rb:4", nil, nil]'
+    details:
+      flog: complexity is 2.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:9
+      file_name: app/controllers/projects_controller.rb
+      line_number: '9'
+      hash_key: '["app/controllers/projects_controller.rb:9", nil, nil]'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/post.rb:7
+      file_name: app/models/post.rb
+      line_number: '7'
+      hash_key: '["app/models/post.rb:7", nil, nil]'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:5
+      file_name: app/controllers/projects_controller.rb
+      line_number: '5'
+      hash_key: '["app/controllers/projects_controller.rb:5", nil, nil]'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb:18
+      file_name: app/controllers/application_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/application_controller.rb:18", nil, nil]'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb:29
+      file_name: app/policies/application_policy.rb
+      line_number: '29'
+      hash_key: '["app/policies/application_policy.rb:29", nil, nil]'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:40
+      file_name: app/controllers/posts_controller.rb
+      line_number: '40'
+      hash_key: '["app/controllers/posts_controller.rb:40", nil, nil]'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb:21
+      file_name: app/policies/application_policy.rb
+      line_number: '21'
+      hash_key: '["app/policies/application_policy.rb:21", nil, nil]'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/posts_controller.rb
+      file_name: app/controllers/posts_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/posts_controller.rb", nil, nil]'
+    details:
+      flay: found 2 code duplications
+      reek: found 12 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb:9
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '9'
+      hash_key: '["app/controllers/users/registrations_controller.rb:9", nil, nil]'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb:3
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '3'
+      hash_key: '["app/controllers/users/registrations_controller.rb:3", nil, nil]'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/home_controller.rb
+      file_name: app/controllers/home_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/home_controller.rb", nil, nil]'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb
+      file_name: app/controllers/application_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/application_controller.rb", nil, nil]'
+    details:
+      reek: found 2 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/omniauth_callbacks_controller.rb", nil, nil]'
+    details:
+      reek: found 2 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Running Roodi checks
+      file_name: Running Roodi checks
+      line_number: 
+      hash_key: '["Running Roodi checks", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", nil, nil]'
+    details:
+      reek: found 2 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/layouts/application.html.erb
+      file_name: app/views/layouts/application.html.erb
+      line_number: 
+      hash_key: '["app/views/layouts/application.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/post_policy.rb
+      file_name: app/policies/post_policy.rb
+      line_number: 
+      hash_key: '["app/policies/post_policy.rb", nil, nil]'
+    details:
+      reek: found 2 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users/registrations_controller.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/projects/show.html.erb
+      file_name: app/views/projects/show.html.erb
+      line_number: 
+      hash_key: '["app/views/projects/show.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  - location:
+      class_name: 
+      method_name: 
+      file_path: "\e[31mapp/helpers/application_helper.rb"
+      file_name: "\e[31mapp/helpers/application_helper.rb"
+      line_number: 
+      hash_key: '["\e[31mapp/helpers/application_helper.rb", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/project.rb
+      file_name: app/models/project.rb
+      line_number: 
+      hash_key: '["app/models/project.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/shared/_nav.html.erb
+      file_name: app/views/shared/_nav.html.erb
+      line_number: 
+      hash_key: '["app/views/shared/_nav.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users/passwords_controller.rb
+      file_name: app/controllers/users/passwords_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users/passwords_controller.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/policies/application_policy.rb
+      file_name: app/policies/application_policy.rb
+      line_number: 
+      hash_key: '["app/policies/application_policy.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/post.rb
+      file_name: app/models/post.rb
+      line_number: 
+      hash_key: '["app/models/post.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: "\e[31mapp/policies/post_policy.rb"
+      file_name: "\e[31mapp/policies/post_policy.rb"
+      line_number: 
+      hash_key: '["\e[31mapp/policies/post_policy.rb", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/posts/show.html.erb
+      file_name: app/views/posts/show.html.erb
+      line_number: 
+      hash_key: '["app/views/posts/show.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  classes:
+  - location:
+      class_name: PostsController
+      method_name: 
+      file_path: app/controllers/posts_controller.rb:46
+      file_name: app/controllers/posts_controller.rb
+      line_number: '46'
+      hash_key: '["app/controllers/posts_controller.rb:46", "PostsController", nil]'
+    details:
+      flog: average complexity is 8.3
+      reek: found 12 code smells
+      saikuro: average complexity is 3.3
+  - location:
+      class_name: OmniauthCallbacksController
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb:2
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/omniauth_callbacks_controller.rb:2", "OmniauthCallbacksController",
+        nil]'
+    details:
+      flog: average complexity is 9.3
+      reek: found 2 code smells
+      saikuro: complexity is 2.0
+  - location:
+      class_name: PostPolicy
+      method_name: 
+      file_path: app/policies/post_policy.rb:24
+      file_name: app/policies/post_policy.rb
+      line_number: '24'
+      hash_key: '["app/policies/post_policy.rb:24", "PostPolicy", nil]'
+    details:
+      flog: average complexity is 9.2
+      reek: found 2 code smells
+      saikuro: average complexity is 2.0
+  - location:
+      class_name: ApplicationHelper
+      method_name: 
+      file_path: app/helpers/application_helper.rb:4
+      file_name: app/helpers/application_helper.rb
+      line_number: '4'
+      hash_key: '["app/helpers/application_helper.rb:4", "ApplicationHelper", nil]'
+    details:
+      flog: complexity is 5.4
+      saikuro: complexity is 5.0
+  - location:
+      class_name: CommentsController
+      method_name: 
+      file_path: app/controllers/comments_controller.rb:5
+      file_name: app/controllers/comments_controller.rb
+      line_number: '5'
+      hash_key: '["app/controllers/comments_controller.rb:5", "CommentsController",
+        nil]'
+    details:
+      flog: average complexity is 7.4
+      saikuro: average complexity is 1.3
+  - location:
+      class_name: ApplicationController
+      method_name: 
+      file_path: app/controllers/application_controller.rb:27
+      file_name: app/controllers/application_controller.rb
+      line_number: '27'
+      hash_key: '["app/controllers/application_controller.rb:27", "ApplicationController",
+        nil]'
+    details:
+      flog: average complexity is 4.8
+      reek: found 2 code smells
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: User
+      method_name: 
+      file_path: app/models/user.rb:24
+      file_name: app/models/user.rb
+      line_number: '24'
+      hash_key: '["app/models/user.rb:24", "User", nil]'
+    details:
+      flog: average complexity is 4.1
+      reek: found 1 code smells
+      saikuro: average complexity is 1.7
+  - location:
+      class_name: ProjectsController
+      method_name: 
+      file_path: app/controllers/projects_controller.rb:13
+      file_name: app/controllers/projects_controller.rb
+      line_number: '13'
+      hash_key: '["app/controllers/projects_controller.rb:13", "ProjectsController",
+        nil]'
+    details:
+      flog: average complexity is 3.4
+      saikuro: average complexity is 1.2
+  - location:
+      class_name: Project
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Project", nil]'
+    details:
+      flog: complexity is 4.0
+      reek: found 1 code smells
+  - location:
+      class_name: Comment
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Comment", nil]'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: Post
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Post", nil]'
+    details:
+      flog: average complexity is 2.9
+      reek: found 1 code smells
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: 
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", nil]'
+    details:
+      flog: average complexity is 2.7
+      reek: found 1 code smells
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: PasswordsController
+      method_name: 
+      file_path: app/controllers/users/passwords_controller.rb:2
+      file_name: app/controllers/users/passwords_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/users/passwords_controller.rb:2", "PasswordsController",
+        nil]'
+    details:
+      flog: average complexity is 2.3
+      reek: found 1 code smells
+  - location:
+      class_name: RegistrationsController
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "RegistrationsController",
+        nil]'
+    details:
+      flog: average complexity is 1.6
+      reek: found 1 code smells
+  - location:
+      class_name: HomeController
+      method_name: 
+      file_path: app/controllers/home_controller.rb
+      file_name: app/controllers/home_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/home_controller.rb", "HomeController", nil]'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Users
+      method_name: 
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "Users",
+        nil]'
+    details:
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: User#self
+      method_name: 
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", "User#self", nil]'
+    details:
+      reek: found 1 code smells
+  methods:
+  - location:
+      class_name: PostsController
+      method_name: PostsController#create
+      file_path: app/controllers/posts_controller.rb:46
+      file_name: app/controllers/posts_controller.rb
+      line_number: '46'
+      hash_key: '["app/controllers/posts_controller.rb:46", "PostsController", "PostsController#create"]'
+      simple_method_name: '#create'
+    details:
+      flog: complexity is 23.4
+      reek: found 4 code smells
+      saikuro: complexity is 7.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#resolve
+      file_path: app/policies/post_policy.rb:24
+      file_name: app/policies/post_policy.rb
+      line_number: '24'
+      hash_key: '["app/policies/post_policy.rb:24", "PostPolicy", "PostPolicy#resolve"]'
+      simple_method_name: '#resolve'
+    details:
+      flog: complexity is 27.9
+      reek: found 1 code smells
+      saikuro: complexity is 3.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#update
+      file_path: app/controllers/posts_controller.rb:65
+      file_name: app/controllers/posts_controller.rb
+      line_number: '65'
+      hash_key: '["app/controllers/posts_controller.rb:65", "PostsController", "PostsController#update"]'
+      simple_method_name: '#update'
+    details:
+      flog: complexity is 18.3
+      reek: found 3 code smells
+      saikuro: complexity is 7.0
+  - location:
+      class_name: OmniauthCallbacksController
+      method_name: OmniauthCallbacksController#all
+      file_path: app/controllers/omniauth_callbacks_controller.rb:2
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/omniauth_callbacks_controller.rb:2", "OmniauthCallbacksController",
+        "OmniauthCallbacksController#all"]'
+      simple_method_name: '#all'
+    details:
+      flog: complexity is 16.6
+      reek: found 1 code smells
+      saikuro: complexity is 2.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#destroy
+      file_path: app/controllers/posts_controller.rb:82
+      file_name: app/controllers/posts_controller.rb
+      line_number: '82'
+      hash_key: '["app/controllers/posts_controller.rb:82", "PostsController", "PostsController#destroy"]'
+      simple_method_name: '#destroy'
+    details:
+      flog: complexity is 10.1
+      reek: found 1 code smells
+      saikuro: complexity is 4.0
+  - location:
+      class_name: CommentsController
+      method_name: CommentsController#create
+      file_path: app/controllers/comments_controller.rb:5
+      file_name: app/controllers/comments_controller.rb
+      line_number: '5'
+      hash_key: '["app/controllers/comments_controller.rb:5", "CommentsController",
+        "CommentsController#create"]'
+      simple_method_name: '#create'
+    details:
+      flog: complexity is 12.4
+      saikuro: complexity is 2.0
+  - location:
+      class_name: CommentsController
+      method_name: CommentsController#load_commentable
+      file_path: app/controllers/comments_controller.rb:27
+      file_name: app/controllers/comments_controller.rb
+      line_number: '27'
+      hash_key: '["app/controllers/comments_controller.rb:27", "CommentsController",
+        "CommentsController#load_commentable"]'
+      simple_method_name: '#load_commentable'
+    details:
+      flog: complexity is 11.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#show
+      file_path: app/controllers/posts_controller.rb:18
+      file_name: app/controllers/posts_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/posts_controller.rb:18", "PostsController", "PostsController#show"]'
+      simple_method_name: '#show'
+    details:
+      flog: complexity is 7.7
+      reek: found 2 code smells
+      saikuro: complexity is 3.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#update?
+      file_path: app/policies/post_policy.rb:14
+      file_name: app/policies/post_policy.rb
+      line_number: '14'
+      hash_key: '["app/policies/post_policy.rb:14", "PostPolicy", "PostPolicy#update?"]'
+      simple_method_name: '#update?'
+    details:
+      flog: complexity is 9.0
+      saikuro: complexity is 2.0
+  - location:
+      class_name: User
+      method_name: User#from_omniauth
+      file_path: app/models/user.rb:24
+      file_name: app/models/user.rb
+      line_number: '24'
+      hash_key: '["app/models/user.rb:24", "User", "User#from_omniauth"]'
+      simple_method_name: '#from_omniauth'
+    details:
+      flog: complexity is 11.0
+  - location:
+      class_name: ApplicationHelper
+      method_name: ApplicationHelper#flash_class
+      file_path: app/helpers/application_helper.rb:4
+      file_name: app/helpers/application_helper.rb
+      line_number: '4'
+      hash_key: '["app/helpers/application_helper.rb:4", "ApplicationHelper", "ApplicationHelper#flash_class"]'
+      simple_method_name: '#flash_class'
+    details:
+      flog: complexity is 5.4
+      saikuro: complexity is 5.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#index
+      file_path: app/controllers/posts_controller.rb:8
+      file_name: app/controllers/posts_controller.rb
+      line_number: '8'
+      hash_key: '["app/controllers/posts_controller.rb:8", "PostsController", "PostsController#index"]'
+      simple_method_name: '#index'
+    details:
+      flog: complexity is 6.2
+      reek: found 1 code smells
+      saikuro: complexity is 3.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#create?
+      file_path: app/policies/post_policy.rb:10
+      file_name: app/policies/post_policy.rb
+      line_number: '10'
+      hash_key: '["app/policies/post_policy.rb:10", "PostPolicy", "PostPolicy#create?"]'
+      simple_method_name: '#create?'
+    details:
+      flog: complexity is 7.7
+      saikuro: complexity is 2.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#new
+      file_path: app/controllers/posts_controller.rb:30
+      file_name: app/controllers/posts_controller.rb
+      line_number: '30'
+      hash_key: '["app/controllers/posts_controller.rb:30", "PostsController", "PostsController#new"]'
+      simple_method_name: '#new'
+    details:
+      flog: complexity is 6.2
+      reek: found 1 code smells
+      saikuro: complexity is 3.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#create
+      file_path: app/controllers/projects_controller.rb:13
+      file_name: app/controllers/projects_controller.rb
+      line_number: '13'
+      hash_key: '["app/controllers/projects_controller.rb:13", "ProjectsController",
+        "ProjectsController#create"]'
+      simple_method_name: '#create'
+    details:
+      flog: complexity is 7.1
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#user_not_authorized
+      file_path: app/controllers/application_controller.rb:27
+      file_name: app/controllers/application_controller.rb
+      line_number: '27'
+      hash_key: '["app/controllers/application_controller.rb:27", "ApplicationController",
+        "ApplicationController#user_not_authorized"]'
+      simple_method_name: '#user_not_authorized'
+    details:
+      flog: complexity is 8.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#show?
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", "ApplicationPolicy#show?"]'
+      simple_method_name: '#show?'
+    details:
+      flog: complexity is 6.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#publish?
+      file_path: app/policies/post_policy.rb:19
+      file_name: app/policies/post_policy.rb
+      line_number: '19'
+      hash_key: '["app/policies/post_policy.rb:19", "PostPolicy", "PostPolicy#publish?"]'
+      simple_method_name: '#publish?'
+    details:
+      flog: complexity is 4.7
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#update
+      file_path: app/controllers/projects_controller.rb:32
+      file_name: app/controllers/projects_controller.rb
+      line_number: '32'
+      hash_key: '["app/controllers/projects_controller.rb:32", "ProjectsController",
+        "ProjectsController#update"]'
+      simple_method_name: '#update'
+    details:
+      flog: complexity is 4.5
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "ApplicationController", "ApplicationController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 6.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#scope
+      file_path: app/policies/application_policy.rb:37
+      file_name: app/policies/application_policy.rb
+      line_number: '37'
+      hash_key: '["app/policies/application_policy.rb:37", "ApplicationPolicy", "ApplicationPolicy#scope"]'
+      simple_method_name: '#scope'
+    details:
+      flog: complexity is 4.8
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User
+      method_name: User#update_with_password
+      file_path: app/models/user.rb:48
+      file_name: app/models/user.rb
+      line_number: '48'
+      hash_key: '["app/models/user.rb:48", "User", "User#update_with_password"]'
+      simple_method_name: '#update_with_password'
+    details:
+      flog: complexity is 3.4
+      saikuro: complexity is 2.0
+  - location:
+      class_name: User
+      method_name: User#new_with_session
+      file_path: app/models/user.rb:33
+      file_name: app/models/user.rb
+      line_number: '33'
+      hash_key: '["app/models/user.rb:33", "User", "User#new_with_session"]'
+      simple_method_name: '#new_with_session'
+    details:
+      flog: complexity is 5.3
+  - location:
+      class_name: Post
+      method_name: Post#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Post", "Post#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 5.2
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#set_locale
+      file_path: app/controllers/application_controller.rb:14
+      file_name: app/controllers/application_controller.rb
+      line_number: '14'
+      hash_key: '["app/controllers/application_controller.rb:14", "ApplicationController",
+        "ApplicationController#set_locale"]'
+      simple_method_name: '#set_locale'
+    details:
+      flog: complexity is 3.8
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#set_project
+      file_path: app/controllers/projects_controller.rb:42
+      file_name: app/controllers/projects_controller.rb
+      line_number: '42'
+      hash_key: '["app/controllers/projects_controller.rb:42", "ProjectsController",
+        "ProjectsController#set_project"]'
+      simple_method_name: '#set_project'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#set_post
+      file_path: app/controllers/posts_controller.rb:94
+      file_name: app/controllers/posts_controller.rb
+      line_number: '94'
+      hash_key: '["app/controllers/posts_controller.rb:94", "PostsController", "PostsController#set_post"]'
+      simple_method_name: '#set_post'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#show
+      file_path: app/controllers/projects_controller.rb:23
+      file_name: app/controllers/projects_controller.rb
+      line_number: '23'
+      hash_key: '["app/controllers/projects_controller.rb:23", "ProjectsController",
+        "ProjectsController#show"]'
+      simple_method_name: '#show'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#project_params
+      file_path: app/controllers/projects_controller.rb:46
+      file_name: app/controllers/projects_controller.rb
+      line_number: '46'
+      hash_key: '["app/controllers/projects_controller.rb:46", "ProjectsController",
+        "ProjectsController#project_params"]'
+      simple_method_name: '#project_params'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: CommentsController
+      method_name: CommentsController#comment_params
+      file_path: app/controllers/comments_controller.rb:18
+      file_name: app/controllers/comments_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/comments_controller.rb:18", "CommentsController",
+        "CommentsController#comment_params"]'
+      simple_method_name: '#comment_params'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#post_params
+      file_path: app/controllers/posts_controller.rb:98
+      file_name: app/controllers/posts_controller.rb
+      line_number: '98'
+      hash_key: '["app/controllers/posts_controller.rb:98", "PostsController", "PostsController#post_params"]'
+      simple_method_name: '#post_params'
+    details:
+      flog: complexity is 3.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "PostPolicy", "PostPolicy#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: Project
+      method_name: Project#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Project", "Project#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: Comment
+      method_name: Comment#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Comment", "Comment#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: User
+      method_name: User#password_required?
+      file_path: app/models/user.rb:44
+      file_name: app/models/user.rb
+      line_number: '44'
+      hash_key: '["app/models/user.rb:44", "User", "User#password_required?"]'
+      simple_method_name: '#password_required?'
+    details:
+      flog: complexity is 2.6
+      saikuro: complexity is 1.0
+  - location:
+      class_name: RegistrationsController
+      method_name: RegistrationsController#sign_up_params
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "RegistrationsController",
+        "RegistrationsController#sign_up_params"]'
+      simple_method_name: '#sign_up_params'
+    details:
+      flog: complexity is 3.6
+  - location:
+      class_name: PasswordsController
+      method_name: PasswordsController#resource_params
+      file_path: app/controllers/users/passwords_controller.rb:2
+      file_name: app/controllers/users/passwords_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/users/passwords_controller.rb:2", "PasswordsController",
+        "PasswordsController#resource_params"]'
+      simple_method_name: '#resource_params'
+    details:
+      flog: complexity is 3.6
+  - location:
+      class_name: Post
+      method_name: Post#authored_by?
+      file_path: app/models/post.rb:12
+      file_name: app/models/post.rb
+      line_number: '12'
+      hash_key: '["app/models/post.rb:12", "Post", "Post#authored_by?"]'
+      simple_method_name: '#authored_by?'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User
+      method_name: User#editor?
+      file_path: app/models/user.rb:20
+      file_name: app/models/user.rb
+      line_number: '20'
+      hash_key: '["app/models/user.rb:20", "User", "User#editor?"]'
+      simple_method_name: '#editor?'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User
+      method_name: User#author?
+      file_path: app/models/user.rb:16
+      file_name: app/models/user.rb
+      line_number: '16'
+      hash_key: '["app/models/user.rb:16", "User", "User#author?"]'
+      simple_method_name: '#author?'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User#self
+      method_name: User#self.new_with_session
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", "User#self", "User#self.new_with_session"]'
+      simple_method_name: .new_with_session
+    details:
+      reek: found 1 code smells
+      saikuro: complexity is 3.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#initialize
+      file_path: app/policies/application_policy.rb:4
+      file_name: app/policies/application_policy.rb
+      line_number: '4'
+      hash_key: '["app/policies/application_policy.rb:4", "ApplicationPolicy", "ApplicationPolicy#initialize"]'
+      simple_method_name: '#initialize'
+    details:
+      flog: complexity is 2.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostPolicy
+      method_name: PostPolicy#initialize
+      file_path: app/policies/post_policy.rb:5
+      file_name: app/policies/post_policy.rb
+      line_number: '5'
+      hash_key: '["app/policies/post_policy.rb:5", "PostPolicy", "PostPolicy#initialize"]'
+      simple_method_name: '#initialize'
+    details:
+      flog: complexity is 2.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "PostsController", "PostsController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 3.0
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#default_url_options
+      file_path: app/controllers/application_controller.rb:18
+      file_name: app/controllers/application_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/application_controller.rb:18", "ApplicationController",
+        "ApplicationController#default_url_options"]'
+      simple_method_name: '#default_url_options'
+    details:
+      flog: complexity is 1.4
+      reek: found 1 code smells
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#new
+      file_path: app/controllers/projects_controller.rb:9
+      file_name: app/controllers/projects_controller.rb
+      line_number: '9'
+      hash_key: '["app/controllers/projects_controller.rb:9", "ProjectsController",
+        "ProjectsController#new"]'
+      simple_method_name: '#new'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Post
+      method_name: Post#publish!
+      file_path: app/models/post.rb:7
+      file_name: app/models/post.rb
+      line_number: '7'
+      hash_key: '["app/models/post.rb:7", "Post", "Post#publish!"]'
+      simple_method_name: '#publish!'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#index
+      file_path: app/controllers/projects_controller.rb:5
+      file_name: app/controllers/projects_controller.rb
+      line_number: '5'
+      hash_key: '["app/controllers/projects_controller.rb:5", "ProjectsController",
+        "ProjectsController#index"]'
+      simple_method_name: '#index'
+    details:
+      flog: complexity is 1.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#new?
+      file_path: app/policies/application_policy.rb:21
+      file_name: app/policies/application_policy.rb
+      line_number: '21'
+      hash_key: '["app/policies/application_policy.rb:21", "ApplicationPolicy", "ApplicationPolicy#new?"]'
+      simple_method_name: '#new?'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User
+      method_name: User#self.from_omniauth
+      file_path: app/models/user.rb:24
+      file_name: app/models/user.rb
+      line_number: '24'
+      hash_key: '["app/models/user.rb:24", "User", "User#self.from_omniauth"]'
+      simple_method_name: '#self.from_omniauth'
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#edit?
+      file_path: app/policies/application_policy.rb:29
+      file_name: app/policies/application_policy.rb
+      line_number: '29'
+      hash_key: '["app/policies/application_policy.rb:29", "ApplicationPolicy", "ApplicationPolicy#edit?"]'
+      simple_method_name: '#edit?'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: User
+      method_name: User#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "User", "User#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "ProjectsController", "ProjectsController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.0
+  - location:
+      class_name: CommentsController
+      method_name: CommentsController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "CommentsController", "CommentsController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.0
+  - location:
+      class_name: PostsController
+      method_name: PostsController#edit
+      file_path: app/controllers/posts_controller.rb:40
+      file_name: app/controllers/posts_controller.rb
+      line_number: '40'
+      hash_key: '["app/controllers/posts_controller.rb:40", "PostsController", "PostsController#edit"]'
+      simple_method_name: '#edit'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: OmniauthCallbacksController
+      method_name: OmniauthCallbacksController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "OmniauthCallbacksController", "OmniauthCallbacksController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.0
+  - location:
+      class_name: RegistrationsController
+      method_name: RegistrationsController#create
+      file_path: app/controllers/users/registrations_controller.rb:3
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '3'
+      hash_key: '["app/controllers/users/registrations_controller.rb:3", "RegistrationsController",
+        "RegistrationsController#create"]'
+      simple_method_name: '#create'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: RegistrationsController
+      method_name: RegistrationsController#build_resource
+      file_path: app/controllers/users/registrations_controller.rb:9
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '9'
+      hash_key: '["app/controllers/users/registrations_controller.rb:9", "RegistrationsController",
+        "RegistrationsController#build_resource"]'
+      simple_method_name: '#build_resource'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: RegistrationsController
+      method_name: RegistrationsController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "RegistrationsController", "RegistrationsController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: PasswordsController
+      method_name: PasswordsController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "PasswordsController", "PasswordsController#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "ApplicationPolicy", "ApplicationPolicy#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: ProjectsController
+      method_name: ProjectsController#edit
+      file_path: app/controllers/projects_controller.rb:13
+      file_name: app/controllers/projects_controller.rb
+      line_number: '13'
+      hash_key: '["app/controllers/projects_controller.rb:13", "ProjectsController",
+        "ProjectsController#edit"]'
+      simple_method_name: '#edit'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#destroy?
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", "ApplicationPolicy#destroy?"]'
+      simple_method_name: '#destroy?'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#update?
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", "ApplicationPolicy#update?"]'
+      simple_method_name: '#update?'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#create?
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", "ApplicationPolicy#create?"]'
+      simple_method_name: '#create?'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ApplicationPolicy
+      method_name: ApplicationPolicy#index?
+      file_path: app/policies/application_policy.rb:13
+      file_name: app/policies/application_policy.rb
+      line_number: '13'
+      hash_key: '["app/policies/application_policy.rb:13", "ApplicationPolicy", "ApplicationPolicy#index?"]'
+      simple_method_name: '#index?'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Users
+      method_name: Users#sign_up_params
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "Users",
+        "Users#sign_up_params"]'
+      simple_method_name: '#sign_up_params'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Users
+      method_name: Users#build_resource
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "Users",
+        "Users#build_resource"]'
+      simple_method_name: '#build_resource'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Users
+      method_name: Users#create
+      file_path: app/controllers/users/registrations_controller.rb:18
+      file_name: app/controllers/users/registrations_controller.rb
+      line_number: '18'
+      hash_key: '["app/controllers/users/registrations_controller.rb:18", "Users",
+        "Users#create"]'
+      simple_method_name: '#create'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: HomeController
+      method_name: HomeController#index
+      file_path: app/controllers/home_controller.rb
+      file_name: app/controllers/home_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/home_controller.rb", "HomeController", "HomeController#index"]'
+      simple_method_name: '#index'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Users
+      method_name: Users#resource_params
+      file_path: app/controllers/users/passwords_controller.rb:2
+      file_name: app/controllers/users/passwords_controller.rb
+      line_number: '2'
+      hash_key: '["app/controllers/users/passwords_controller.rb:2", "Users", "Users#resource_params"]'
+      simple_method_name: '#resource_params'
+    details:
+      saikuro: complexity is 1.0

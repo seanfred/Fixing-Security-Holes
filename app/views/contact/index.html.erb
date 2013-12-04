@@ -1,0 +1,93 @@
+<article id="contact" class="on">
+
+  <div class="container">
+
+    <div class="sixteen columns">
+      <div class="sep"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div id="contact-details">
+    <div class="container">
+      <div class="sixteen columns">
+        <h3>Contact Details</h3>
+      </div>
+      <div class="sixteen columns">
+        <div class="sep1"></div>
+      </div>
+      <div class="one-third column">
+        <div class="icon-contact">&#xf015;</div>
+        <div class="detail">
+          <p>Seattle, WA</p>
+        </div>
+      </div>
+      <div class="one-third column">
+        <div class="icon-contact">&#xf003;</div>
+        <div class="detail">
+          <p>sean.frederick.1@gmail.com</p>
+        </div>
+      </div>
+    <div class="one-third column">
+      <div class="icon-contact">&#xf0e1;</div>
+      <div class="detail">
+        <p>linkedin.com/in/seanfred</p>
+      </div>
+    </div>
+</div>
+</div>
+
+  <div id="contact-mes">
+    <div class="container">
+      <div class="sixteen columns">
+        <h3>Drop Me a Line</h3>
+      </div>
+      <div class="sixteen columns">
+        <div class="sep1"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sixteen columns">
+        <form name="ajax-form" id="ajax-form" action="mail-it.php" method="post">
+          <label for="name">Name: *
+            <span class="error" id="err-name">please enter name</span>
+          </label>
+          <input name="name" id="name" type="text" />
+          <label for="email">E-Mail: *
+            <span class="error" id="err-email">please enter e-mail</span>
+            <span class="error" id="err-emailvld">e-mail is not a valid format</span>
+          </label>
+          <input name="email" id="email" type="text" />
+          <label for="message">Message:</label>
+          <textarea name="message" id="message"></textarea>
+          <button class="send_message" id="send">Submit</button>
+          <div class="error" id="err-form">There was a problem validating the form please check!</div>
+          <div class="error" id="err-timedout">The connection to the server timed out!</div>
+          <div class="error" id="err-state"></div>
+        </form>
+        <div id="ajaxsuccess">Successfully sent!!</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="sixteen columns">
+        <a href="javascript:goTo('home');"><img src="https://s3.amazonaws.com/seanfred/pics/SEAN_FREDERICK_1+(1).png" alt=""/></a>
+      </div>
+      <div class="sixteen columns">
+        <p>© 2013 Sean Frederick</p>
+      </div>
+      <div class="sixteen columns">
+        <div class="social-bottom">
+          <ul class="bottom-social">
+            <li class="icon-bottom"><a href="https://twitter.com/SeanFrederick7" target="_blank">&#xf099;</a></li>
+            <li class="icon-bottom"><a href="https://linkedin.com/in/seanfred/" target="_blank">&#xf0e1;</a></li>
+            <li class="icon-bottom"><a href="https://github.com/seanfred?tab=repositories" target="_blank">&#xf09b;</a></li>
+            <li class="icon-bottom"><a href="https://plus.google.com/u/0/110208847982226163285/about/p/pub" target="_blank">&#xf0d5;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>

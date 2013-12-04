@@ -1,0 +1,127 @@
+        <html><head><style>
+          table { background: #fff; color: #000; }
+.ruby .normal { color: #000; }
+.ruby .comment { color: #005; font-style: italic; }
+.ruby .keyword { color: #A44; font-weight: bold; }
+.ruby .method { color: #44f; }
+.ruby .class { color: #b1713d; }
+.ruby .module { color: #050; }
+.ruby .punct { color: #668; font-weight: bold; }
+.ruby .symbol { color: #00f; }
+.ruby .string { color: #4a4; }
+.ruby .char { color: #F07; }
+.ruby .ident { color: #000; }
+.ruby .constant { color: #b1713d; }
+.ruby .regex { color: #B66; background: #FEF; }
+.ruby .number { color: #F99; }
+.ruby .attribute { color: #f84; }
+.ruby .global { color: #7FB; }
+.ruby .expr { color: #227; }
+.ruby .escape { color: #277; }
+          .bluff-tooltip {
+	background: #fff;
+	border: 1px solid #d1edf5;
+	padding: 8px 8px 6px;
+}
+.bluff-tooltip .color {
+	display: block;
+	height: 4px;
+	width: 30px;
+	margin: 0 0 4px;
+	overflow: hidden;
+}
+.bluff-tooltip .data {
+	font-weight: bold;
+}
+
+          
+        </style></head><body>
+<table cellpadding='0' cellspacing='0' class='ruby'><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span><span class="comment"># Author::    Ivan Storck and Brook Riggio</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n2" name="n2">2</a></span><span class="comment"># Copyright:: Copyright (c) 2013 Code Fellows</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n3" name="n3">3</a></span><span class="comment"># License::   All rights reseved. Contact us, we are flexible.</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n4" name="n4">4</a></span><span class="comment">#</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n5" name="n5">5</a></span><span class="comment"># A comment is a text entry about a post</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n6" name="n6">6</a></span><span class="keyword">class</span> <span class="class">Comment</span> &lt; <span class="constant">ActiveRecord</span>::<span class="constant">Base</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n7" name="n7">7</a></span><span class="comment"># No longer needed b/c strong parameters gem but keeping for reference</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n8" name="n8">8</a></span><span class="comment">#  attr_accessible :approved,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n9" name="n9">9</a></span><span class="comment">#                  :author,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span><span class="comment">#                  :author_email,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n11" name="n11">11</a></span><span class="comment">#                  :author_url,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n12" name="n12">12</a></span><span class="comment">#                  :content,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n13" name="n13">13</a></span><span class="comment">#                  :referrer,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span><span class="comment">#                  :user_agent,</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n15" name="n15">15</a></span><span class="comment">#                  :user_ip</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n16" name="n16">16</a></span><span class="comment">#                  :post_id</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n17" name="n17">17</a></span>  belongs_to <span class="symbol">:commentable</span>, <span class="key">polymorphic</span>: <span class="predefined-constant">true</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>  validates <span class="symbol">:content</span>,      <span class="key">presence</span>: <span class="predefined-constant">true</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>  validates <span class="symbol">:author_email</span>, <span class="key">presence</span>: <span class="predefined-constant">true</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>  validates <span class="symbol">:author</span>,       <span class="key">presence</span>: <span class="predefined-constant">true</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n21" name="n21">21</a></span><span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>
+</pre></div>
+</div>
+</td></tr><table></body></html>

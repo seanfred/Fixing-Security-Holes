@@ -1,0 +1,587 @@
+        <html><head><style>
+          table { background: #fff; color: #000; }
+.ruby .normal { color: #000; }
+.ruby .comment { color: #005; font-style: italic; }
+.ruby .keyword { color: #A44; font-weight: bold; }
+.ruby .method { color: #44f; }
+.ruby .class { color: #b1713d; }
+.ruby .module { color: #050; }
+.ruby .punct { color: #668; font-weight: bold; }
+.ruby .symbol { color: #00f; }
+.ruby .string { color: #4a4; }
+.ruby .char { color: #F07; }
+.ruby .ident { color: #000; }
+.ruby .constant { color: #b1713d; }
+.ruby .regex { color: #B66; background: #FEF; }
+.ruby .number { color: #F99; }
+.ruby .attribute { color: #f84; }
+.ruby .global { color: #7FB; }
+.ruby .expr { color: #227; }
+.ruby .escape { color: #277; }
+          .bluff-tooltip {
+	background: #fff;
+	border: 1px solid #d1edf5;
+	padding: 8px 8px 6px;
+}
+.bluff-tooltip .color {
+	display: block;
+	height: 4px;
+	width: 30px;
+	margin: 0 0 4px;
+	overflow: hidden;
+}
+.bluff-tooltip .data {
+	font-weight: bold;
+}
+
+          
+        </style></head><body>
+<table cellpadding='0' cellspacing='0' class='ruby'><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>&lt;!<span class="constant">DOCTYPE</span> html&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n2" name="n2">2</a></span>&lt;html lang=<span class="string"><span class="delimiter">&quot;</span><span class="content">en</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n3" name="n3">3</a></span>  &lt;head&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n4" name="n4">4</a></span>    &lt;meta charset=<span class="string"><span class="delimiter">&quot;</span><span class="content">utf-8</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n5" name="n5">5</a></span>    &lt;meta name=<span class="string"><span class="delimiter">&quot;</span><span class="content">viewport</span><span class="delimiter">&quot;</span></span> content=<span class="string"><span class="delimiter">&quot;</span><span class="content">width=device-width, initial-scale=1.0</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n6" name="n6">6</a></span>    &lt;meta name=<span class="string"><span class="delimiter">&quot;</span><span class="content">description</span><span class="delimiter">&quot;</span></span> content=<span class="string"><span class="delimiter">&quot;</span><span class="content">a portfolio site</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n7" name="n7">7</a></span>    &lt;meta name=<span class="string"><span class="delimiter">&quot;</span><span class="content">author</span><span class="delimiter">&quot;</span></span> content=<span class="string"><span class="delimiter">&quot;</span><span class="content">Sean Frederick</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n8" name="n8">8</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n9" name="n9">9</a></span>    &lt;title&gt;<span class="constant">Sean</span> <span class="constant">Frederick</span> <span class="constant">Portfolio</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">title&gt;</span></span>
+<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n11" name="n11">11</a></span>    &lt;!-- <span class="constant">Add</span> custom <span class="constant">CSS</span> here
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n12" name="n12">12</a></span>    &lt;link href=<span class="string"><span class="delimiter">&quot;</span><span class="content">font-awesome/css/font-awesome.min.css</span><span class="delimiter">&quot;</span></span> rel=<span class="string"><span class="delimiter">&quot;</span><span class="content">stylesheet</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n13" name="n13">13</a></span>     --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n15" name="n15">15</a></span>    &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> stylesheet_link_tag    &quot;application&quot;, :media </span><span class="delimiter">=</span></span>&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> %&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n16" name="n16">16</a></span>    &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> javascript_include_tag &quot;application&quot; %&gt;</span></span>
+<span class="line-numbers"><a href="#n17" name="n17">17</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n17" name="n17">17</a></span>    &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> csrf_meta_tags %&gt;</span></span>
+<span class="line-numbers"><a href="#n18" name="n18">18</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>    &lt;<span class="string"><span class="delimiter">% </span><span class="content">flash.each</span><span class="delimiter"> </span></span><span class="keyword">do</span> |key, value| <span class="string"><span class="delimiter">%&gt;</span><span class="content"></span></span>
+<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>        &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">&lt;%= flash_class(key) %&gt;</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n21" name="n21">21</a></span>              &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> value %&gt;</span></span>
+<span class="line-numbers"><a href="#n22" name="n22">22</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><a href="#n23" name="n23">23</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n23" name="n23">23</a></span>  &lt;<span class="string"><span class="delimiter">% </span><span class="content">end</span><span class="delimiter"> </span></span>%&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n24" name="n24">24</a></span>  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">head&gt;</span></span>
+<span class="line-numbers"><a href="#n25" name="n25">25</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n25" name="n25">25</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n26" name="n26">26</a></span>  &lt;body&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n27" name="n27">27</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n28" name="n28">28</a></span>    &lt;nav <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar navbar-inverse navbar-fixed-top</span><span class="delimiter">&quot;</span></span> role=<span class="string"><span class="delimiter">&quot;</span><span class="content">navigation</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n29" name="n29">29</a></span>      &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>        &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar-header</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n31" name="n31">31</a></span>          &lt;button type=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar-toggle</span><span class="delimiter">&quot;</span></span> data-toggle=<span class="string"><span class="delimiter">&quot;</span><span class="content">collapse</span><span class="delimiter">&quot;</span></span> data-target=<span class="string"><span class="delimiter">&quot;</span><span class="content">.navbar-ex1-collapse</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n32" name="n32">32</a></span>            &lt;span <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">sr-only</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Toggle</span> navigation&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">span&gt;</span></span>
+<span class="line-numbers"><a href="#n33" name="n33">33</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n33" name="n33">33</a></span>            &lt;span <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-bar</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">span&gt;</span></span>
+<span class="line-numbers"><a href="#n34" name="n34">34</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n34" name="n34">34</a></span>            &lt;span <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-bar</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">span&gt;</span></span>
+<span class="line-numbers"><a href="#n35" name="n35">35</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n35" name="n35">35</a></span>            &lt;span <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-bar</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">span&gt;</span></span>
+<span class="line-numbers"><a href="#n36" name="n36">36</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n36" name="n36">36</a></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">button&gt;</span></span>
+<span class="line-numbers"><a href="#n37" name="n37">37</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n37" name="n37">37</a></span>          &lt;!-- <span class="constant">You</span><span class="string"><span class="delimiter">'</span><span class="content">ll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you</span><span class="delimiter">'</span></span>ll find it) --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n38" name="n38">38</a></span>          &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Home&quot;, root_path, class: &quot;navbar-brand&quot; %&gt;</span></span>
+<span class="line-numbers"><a href="#n39" name="n39">39</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n39" name="n39">39</a></span>        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n41" name="n41">41</a></span>        &lt;!-- <span class="constant">Collect</span> the nav links, forms, <span class="keyword">and</span> other content <span class="keyword">for</span> toggling --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n42" name="n42">42</a></span>        &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">collapse navbar-collapse navbar-ex1-collapse</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n43" name="n43">43</a></span>          &lt;ul <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">nav navbar-nav navbar-right</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n44" name="n44">44</a></span>            &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">about.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">About</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n45" name="n45">45</a></span>            &lt;li&gt;&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Blog&quot;, posts_path %&gt;&lt;/li&gt;</span></span>
+<span class="line-numbers"><a href="#n46" name="n46">46</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n46" name="n46">46</a></span>            &lt;li&gt;&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Projects&quot;, projects_path %&gt;&lt;/li&gt;</span></span>
+<span class="line-numbers"><a href="#n47" name="n47">47</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n47" name="n47">47</a></span>            &lt;<span class="string"><span class="delimiter">% </span><span class="content">if</span><span class="delimiter"> </span></span>current_user.present? <span class="string"><span class="delimiter">%&gt;</span><span class="content"></span></span>
+<span class="line-numbers"><a href="#n48" name="n48">48</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n48" name="n48">48</a></span>              &lt;li&gt;&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Sign Out&quot;, destroy_user_session_path, method: :delete %&gt;&lt;/li&gt;</span></span>
+<span class="line-numbers"><a href="#n49" name="n49">49</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n49" name="n49">49</a></span>            &lt;<span class="string"><span class="delimiter">% </span><span class="content">else</span><span class="delimiter"> </span></span>%&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>              &lt;li&gt;&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Sign Up&quot;, new_user_registration_path %&gt;&lt;/li&gt;</span></span>
+<span class="line-numbers"><a href="#n51" name="n51">51</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n51" name="n51">51</a></span>              &lt;li&gt;&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Sign In&quot;, new_user_session_path %&gt;&lt;/li&gt;</span></span>
+<span class="line-numbers"><a href="#n52" name="n52">52</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n52" name="n52">52</a></span>              &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;Sign in with Twitter&quot;, user_omniauth_authorize_path(:twitter) %&gt;</span></span>
+<span class="line-numbers"><a href="#n53" name="n53">53</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n53" name="n53">53</a></span>            &lt;<span class="string"><span class="delimiter">% </span><span class="content">end</span><span class="delimiter"> </span></span>%&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n54" name="n54">54</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n55" name="n55">55</a></span>            &lt;!-- &lt;li <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n56" name="n56">56</a></span>              &lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">#</span><span class="delimiter">&quot;</span></span> <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-toggle</span><span class="delimiter">&quot;</span></span> data-toggle=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Portfolio</span> &lt;b <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">caret</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">b&gt;&lt;</span><span class="delimiter">/</span></span>a&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n57" name="n57">57</a></span>              &lt;ul <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-menu</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n58" name="n58">58</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">portfolio-1-col.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="integer">1</span> <span class="constant">Column</span> <span class="constant">Portfolio</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n59" name="n59">59</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">portfolio-2-col.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="integer">2</span> <span class="constant">Column</span> <span class="constant">Portfolio</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n60" name="n60">60</a></strong></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">portfolio-3-col.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="integer">3</span> <span class="constant">Column</span> <span class="constant">Portfolio</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n61" name="n61">61</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">portfolio-4-col.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="integer">4</span> <span class="constant">Column</span> <span class="constant">Portfolio</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n62" name="n62">62</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">portfolio-item.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Single</span> <span class="constant">Portfolio</span> <span class="constant">Item</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n63" name="n63">63</a></span>              &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">ul&gt;</span></span>
+<span class="line-numbers"><a href="#n64" name="n64">64</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n64" name="n64">64</a></span>            &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">li&gt;</span></span>
+<span class="line-numbers"><a href="#n65" name="n65">65</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n65" name="n65">65</a></span>            &lt;li <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n66" name="n66">66</a></span>              &lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">#</span><span class="delimiter">&quot;</span></span> <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-toggle</span><span class="delimiter">&quot;</span></span> data-toggle=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Blog</span> &lt;b <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">caret</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">b&gt;&lt;</span><span class="delimiter">/</span></span>a&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n67" name="n67">67</a></span>              &lt;ul <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-menu</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n68" name="n68">68</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">blog-home-1.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Blog</span> <span class="constant">Home</span> <span class="integer">1</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n69" name="n69">69</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">blog-home-2.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Blog</span> <span class="constant">Home</span> <span class="integer">2</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n70" name="n70">70</a></strong></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">blog-post.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Blog</span> <span class="constant">Post</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n71" name="n71">71</a></span>              &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">ul&gt;</span></span>
+<span class="line-numbers"><a href="#n72" name="n72">72</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n72" name="n72">72</a></span>            &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">li&gt;</span></span>
+<span class="line-numbers"><a href="#n73" name="n73">73</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n73" name="n73">73</a></span>            &lt;li <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n74" name="n74">74</a></span>              &lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">#</span><span class="delimiter">&quot;</span></span> <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-toggle</span><span class="delimiter">&quot;</span></span> data-toggle=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Other</span> <span class="constant">Pages</span> &lt;b <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">caret</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">b&gt;&lt;</span><span class="delimiter">/</span></span>a&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n75" name="n75">75</a></span>              &lt;ul <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown-menu</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n76" name="n76">76</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">full-width.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Full</span> <span class="constant">Width</span> <span class="constant">Page</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n77" name="n77">77</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Sidebar</span> <span class="constant">Page</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n78" name="n78">78</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">faq.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">FAQ</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n79" name="n79">79</a></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">404.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="integer">404</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n80" name="n80">80</a></strong></span>                &lt;li&gt;&lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">pricing.html</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Pricing</span> <span class="constant">Table</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;&lt;</span><span class="delimiter">/</span></span>li&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n81" name="n81">81</a></span>              &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">ul&gt;</span></span>
+<span class="line-numbers"><a href="#n82" name="n82">82</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n82" name="n82">82</a></span>            &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">li&gt; --&gt;</span></span>
+<span class="line-numbers"><a href="#n83" name="n83">83</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n83" name="n83">83</a></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">ul&gt;</span></span>
+<span class="line-numbers"><a href="#n84" name="n84">84</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n84" name="n84">84</a></span>        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.navbar-collapse --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n85" name="n85">85</a></span>      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.container --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n86" name="n86">86</a></span>    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">nav&gt;</span></span>
+<span class="line-numbers"><a href="#n87" name="n87">87</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n87" name="n87">87</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n88" name="n88">88</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n89" name="n89">89</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n90" name="n90">90</a></strong></span>&lt;!--     &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">section</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n91" name="n91">91</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n92" name="n92">92</a></span>      &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n93" name="n93">93</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n94" name="n94">94</a></span>        &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">row</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n95" name="n95">95</a></span>          &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-lg-4 col-md-4</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n96" name="n96">96</a></span>            &lt;h3&gt;&lt;i <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-ok-circle</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">i&gt; Bootstrap 3 Built&lt;</span><span class="delimiter">/</span></span>h3&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n97" name="n97">97</a></span>            &lt;p&gt;<span class="constant">The</span> <span class="string"><span class="delimiter">'</span><span class="content">Modern Business</span><span class="delimiter">'</span></span> website template by &lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://startbootstrap.com</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Start</span> <span class="constant">Bootstrap</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt; is built with &lt;a href=&quot;http:</span><span class="delimiter">/</span></span>/getbootstrap.com<span class="string"><span class="delimiter">&quot;</span><span class="content">&gt;Bootstrap 3&lt;/a&gt;. Make sure you're up to date with latest Bootstrap documentation!&lt;/p&gt;</span></span>
+<span class="line-numbers"><a href="#n98" name="n98">98</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n98" name="n98">98</a></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"> <a href="#n99" name="n99">99</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n99" name="n99">99</a></span>          &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-lg-4 col-md-4</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n100" name="n100">100</a></strong></span>            &lt;h3&gt;&lt;i <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-pencil</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">i&gt; Ready to Style &amp;amp; Edit&lt;</span><span class="delimiter">/</span></span>h3&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n101" name="n101">101</a></span>            &lt;p&gt;<span class="constant">Your</span> ready to go with this pre-built page structure, now all you need to <span class="keyword">do</span> is add your own custom stylings! <span class="constant">You</span> can see some free themes over at &lt;a href=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://bootswatch.com</span><span class="delimiter">&quot;</span></span>&gt;<span class="constant">Bootswatch</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">a&gt;, or come up with your own using &lt;a href=&quot;http:</span><span class="delimiter">/</span></span>/getbootstrap.com/customize/<span class="string"><span class="delimiter">&quot;</span><span class="content">&gt;the Bootstrap customizer&lt;/a&gt;!&lt;/p&gt;</span></span>
+<span class="line-numbers"><a href="#n102" name="n102">102</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n102" name="n102">102</a></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><a href="#n103" name="n103">103</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n103" name="n103">103</a></span>          &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-lg-4 col-md-4</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n104" name="n104">104</a></span>            &lt;h3&gt;&lt;i <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">icon-folder-open-alt</span><span class="delimiter">&quot;</span></span>&gt;&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">i&gt; Many Page Options&lt;</span><span class="delimiter">/</span></span>h3&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n105" name="n105">105</a></span>            &lt;p&gt;<span class="constant">This</span> template features many common pages that you might see on a business website. Pages <span class="key">include</span>: about, contact, portfolio variations, blog, pricing, <span class="constant">FAQ</span>, <span class="integer">404</span>, services, <span class="keyword">and</span> general multi-purpose pages.&lt;/p&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n106" name="n106">106</a></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><a href="#n107" name="n107">107</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n107" name="n107">107</a></span>        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.row --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n108" name="n108">108</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n109" name="n109">109</a></span>      &lt;!-- &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.container --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n110" name="n110">110</a></strong></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n111" name="n111">111</a></span>    &lt;!-- &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span><span class="delimiter">/</span></span>.section --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n112" name="n112">112</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n113" name="n113">113</a></span>    &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">section-colored text-center</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n114" name="n114">114</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n115" name="n115">115</a></span>      &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n116" name="n116">116</a></span>        &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> yield %&gt;</span></span>
+<span class="line-numbers"><a href="#n117" name="n117">117</a></span><span class="string"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n117" name="n117">117</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n118" name="n118">118</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n119" name="n119">119</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n120" name="n120">120</a></strong></span>    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.container --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n121" name="n121">121</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n122" name="n122">122</a></span>    &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n123" name="n123">123</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n124" name="n124">124</a></span>      &lt;hr&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n125" name="n125">125</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n126" name="n126">126</a></span>      &lt;footer&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n127" name="n127">127</a></span>        &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">row</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n128" name="n128">128</a></span>          &lt;div <span class="keyword">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-lg-12</span><span class="delimiter">&quot;</span></span>&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n129" name="n129">129</a></span>            &lt;p&gt;<span class="constant">Copyright</span> &amp;copy; <span class="constant">Sean</span> <span class="constant">Frederick</span> <span class="integer">2013</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;</span></span>
+<span class="line-numbers"><strong><a href="#n130" name="n130">130</a></strong></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n130" name="n130">130</a></strong></span>          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><a href="#n131" name="n131">131</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n131" name="n131">131</a></span>        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;</span></span>
+<span class="line-numbers"><a href="#n132" name="n132">132</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n132" name="n132">132</a></span>      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">footer&gt;</span></span>
+<span class="line-numbers"><a href="#n133" name="n133">133</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n133" name="n133">133</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n134" name="n134">134</a></span>    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;&lt;!-- </span><span class="delimiter">/</span></span>.container --&gt;
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n135" name="n135">135</a></span>  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">body&gt;</span></span>
+<span class="line-numbers"><a href="#n136" name="n136">136</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n136" name="n136">136</a></span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">html&gt;</span></span>
+<span class="line-numbers"><a href="#n137" name="n137">137</a></span><span class="regexp"><span class="content"></span></span></pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n137" name="n137">137</a></span>
+</pre></div>
+</div>
+</td></tr><table></body></html>
